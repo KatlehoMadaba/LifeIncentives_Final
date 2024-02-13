@@ -1,4 +1,4 @@
-﻿<%@ Page Language="vb" MaintainScrollPositionOnPostBack="true" AutoEventWireup="false" CodeBehind="Questions.aspx.vb" Inherits="New_LifeIncentives_2024_P2.Questions" %>
+﻿<%@ Page Language="vb" MaintainScrollPositionOnPostBack="true" AutoEventWireup="false" CodeBehind="Questions.aspx.vb" Inherits="LifeIncentives.Questions" %>
 
 <!DOCTYPE html>
 

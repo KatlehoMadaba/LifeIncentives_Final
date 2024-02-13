@@ -182,6 +182,9 @@
     <Content Include="assets\vendor\php-email-form\validate.js" />
     <Content Include="assets\vendor\swiper\swiper-bundle.min.css" />
     <Content Include="assets\vendor\swiper\swiper-bundle.min.js" />
+    <Content Include="childDashboard.aspx" />
+    <Content Include="childGoals.aspx" />
+    <Content Include="child_Login.aspx" />
     <Content Include="I_css\sb-admin-2.css" />
     <Content Include="I_css\sb-admin-2.min.css" />
     <Content Include="I_css\sidebar.css.txt" />
@@ -192,6 +195,7 @@
     <Content Include="I_js\demo\datatables-demo.js" />
     <Content Include="I_js\sb-admin-2.js" />
     <Content Include="I_js\sb-admin-2.min.js" />
+    <Content Include="landingPage.aspx" />
     <Content Include="Login and Sign Up assets\css\sb-admin-2.css" />
     <Content Include="Login and Sign Up assets\css\sb-admin-2.min.css" />
     <Content Include="Login and Sign Up assets\img\undraw_posting_photo.svg" />
@@ -1875,11 +1879,44 @@
     <Content Include="Login and Sign Up assets\vendor\jquery\jquery.min.js" />
     <Content Include="Login and Sign Up assets\vendor\jquery\jquery.slim.js" />
     <Content Include="Login and Sign Up assets\vendor\jquery\jquery.slim.min.js" />
+    <Content Include="parentDashboard.aspx" />
+    <Content Include="parentLogin.aspx" />
     <Content Include="Parent_Goals.aspx" />
+    <Content Include="Questions.aspx" />
+    <Content Include="signUp.aspx" />
+    <Content Include="signUpParent.aspx" />
     <Content Include="SiteMaster_css\style.css" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="childDashboard.aspx.designer.vb">
+      <DependentUpon>childDashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="childDashboard.aspx.vb">
+      <DependentUpon>childDashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="childGoals.aspx.designer.vb">
+      <DependentUpon>childGoals.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="childGoals.aspx.vb">
+      <DependentUpon>childGoals.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="child_Login.aspx.designer.vb">
+      <DependentUpon>child_Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="child_Login.aspx.vb">
+      <DependentUpon>child_Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="landingPage.aspx.designer.vb">
+      <DependentUpon>landingPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="landingPage.aspx.vb">
+      <DependentUpon>landingPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="Models\TBL_Child_User.vb" />
     <Compile Include="Models\TBL_Financial_Information.vb" />
     <Compile Include="Models\TBL_Incentives.vb" />
@@ -1907,11 +1944,46 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="parentDashboard.aspx.designer.vb">
+      <DependentUpon>parentDashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="parentDashboard.aspx.vb">
+      <DependentUpon>parentDashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="parentLogin.aspx.designer.vb">
+      <DependentUpon>parentLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="parentLogin.aspx.vb">
+      <DependentUpon>parentLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="Parent_Goals.aspx.designer.vb">
       <DependentUpon>Parent_Goals.aspx</DependentUpon>
     </Compile>
     <Compile Include="Parent_Goals.aspx.vb">
       <DependentUpon>Parent_Goals.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Questions.aspx.designer.vb">
+      <DependentUpon>Questions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Questions.aspx.vb">
+      <DependentUpon>Questions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="signUp.aspx.designer.vb">
+      <DependentUpon>signUp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="signUp.aspx.vb">
+      <DependentUpon>signUp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="signUpParent.aspx.designer.vb">
+      <DependentUpon>signUpParent.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="signUpParent.aspx.vb">
+      <DependentUpon>signUpParent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Site1.Master.designer.vb">
       <DependentUpon>Site1.Master</DependentUpon>

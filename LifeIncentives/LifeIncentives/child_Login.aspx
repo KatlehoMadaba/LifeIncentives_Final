@@ -1,4 +1,4 @@
-﻿<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="child_Login.aspx.vb" Inherits="New_LifeIncentives_2024_P2.child_Login" %>
+﻿<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="child_Login.aspx.vb" Inherits="LifeIncentives.child_Login" %>
 
 <!DOCTYPE html>
 
