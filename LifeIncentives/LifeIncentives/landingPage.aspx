@@ -27,7 +27,7 @@
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet"/>
 
   <!-- =======================================================
   * Template Name: Restaurantly
@@ -92,28 +92,21 @@
     <div class="container position-relative text-center text-lg-start" data-aos="zoom-in" data-aos-delay="100">
       <div class="row">
         <div class="col-lg-8">
-          <h1>Welcome to <span>Life Incentives</span></h1>
+          <h1 style="font-weight:900;color:#0D986A">Welcome to Life Incentives</h1>
           <h2>Here to help you manage your kids for better development</h2>
 
 
 
 
 
-          <div class="btns">
-           <div class="dropdown">
-              <a href="parentLogin.aspx" class="btn-menu animated fadeInUp">Login</a>
-              <div class="dropdown-content" style="color:black;border-radius:35px;background:linear-gradient(45deg,#002316,white)">
-                 <div>
-                       <select name="cars" id="cars" style="color:black;border-radius:35px;background:linear-gradient(45deg,#002316,white)" >
-                         <option value="Parent"  style="color:black;border-radius:35px;background:linear-gradient(45deg,#002316,white)">Parent</option>
-                         <option value="Child"  style="color:black;border-radius:35px;background:linear-gradient(45deg,#002316,white)">Child</option>                                           
-                      </select>
- 
-                 </div>
-              </div>
-         </div>
+            <asp:DropDownList ID="DropDownList" runat="server" CssClass="btn-book">
+                <asp:ListItem Value="0" CssClass="dropdown-item">Login</asp:ListItem>
+                <asp:ListItem Value="1" CssClass="btn">Parent Login</asp:ListItem>
+                <asp:ListItem Value="2" CssClass="btn">Child Login</asp:ListItem>
+            </asp:DropDownList>
+
+
             <a href="signUp.aspx" class="btn-book animated fadeInUp scrollto">Sign Up</a>
-          </div>
         </div>
       </div>
     </div>

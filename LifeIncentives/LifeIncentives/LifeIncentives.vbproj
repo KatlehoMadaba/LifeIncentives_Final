@@ -1897,7 +1897,9 @@
     <Content Include="T-Images\Request-btn.png" />
     <Content Include="T-Images\tasks.png" />
     <Content Include="T-Images\transaction.png" />
+    <Content Include="Transactions.aspx" />
     <Content Include="Web.config" />
+    <Content Include="Profile.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="childDashboard.aspx.designer.vb">
@@ -2003,11 +2005,25 @@
       <DependentUpon>Site1.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="Transactions.aspx.designer.vb">
+      <DependentUpon>Transactions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Transactions.aspx.vb">
+      <DependentUpon>Transactions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="Utility\cipherGate.vb" />
     <Compile Include="Utility\DatabaseConnectException.vb" />
     <Compile Include="Utility\DBInterface.vb" />
     <Compile Include="Utility\ENTITY.VB" />
     <Compile Include="Utility\genfunctions.vb" />
+    <Compile Include="Profile.aspx.designer.vb">
+      <DependentUpon>Profile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Profile.aspx.vb">
+      <DependentUpon>Profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="My Project\Resources.resx">
