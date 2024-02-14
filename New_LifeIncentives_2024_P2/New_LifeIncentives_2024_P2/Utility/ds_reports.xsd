@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ds_risk_project" targetNamespace="http://tempuri.org/ds_implied_FGN_bonds.xsd" xmlns:mstns="http://tempuri.org/ds_implied_FGN_bonds.xsd" xmlns="http://tempuri.org/ds_implied_FGN_bonds.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ds_risk_project" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="ds_risk_project" msprop:Generator_UserDSName="ds_risk_project">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DT_ALL_HIGH_RISKS_OCCUR" msprop:Generator_TableClassName="DT_ALL_HIGH_RISKS_OCCURDataTable" msprop:Generator_TableVarName="tableDT_ALL_HIGH_RISKS_OCCUR" msprop:Generator_TablePropName="DT_ALL_HIGH_RISKS_OCCUR" msprop:Generator_RowDeletingName="DT_ALL_HIGH_RISKS_OCCURRowDeleting" msprop:Generator_UserTableName="DT_ALL_HIGH_RISKS_OCCUR" msprop:Generator_RowChangingName="DT_ALL_HIGH_RISKS_OCCURRowChanging" msprop:Generator_RowEvHandlerName="DT_ALL_HIGH_RISKS_OCCURRowChangeEventHandler" msprop:Generator_RowDeletedName="DT_ALL_HIGH_RISKS_OCCURRowDeleted" msprop:Generator_RowEvArgName="DT_ALL_HIGH_RISKS_OCCURRowChangeEvent" msprop:Generator_RowChangedName="DT_ALL_HIGH_RISKS_OCCURRowChanged" msprop:Generator_RowClassName="DT_ALL_HIGH_RISKS_OCCURRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:long" minOccurs="0" />
+              <xs:element name="RISK_DESC" msprop:Generator_ColumnVarNameInTable="columnRISK_DESC" msprop:Generator_ColumnPropNameInRow="RISK_DESC" msprop:Generator_ColumnPropNameInTable="RISK_DESCColumn" msprop:Generator_UserColumnName="RISK_DESC" type="xs:string" minOccurs="0" />
+              <xs:element name="IMPACT_COST" msprop:Generator_ColumnVarNameInTable="columnIMPACT_COST" msprop:Generator_ColumnPropNameInRow="IMPACT_COST" msprop:Generator_ColumnPropNameInTable="IMPACT_COSTColumn" msprop:Generator_UserColumnName="IMPACT_COST" type="xs:string" minOccurs="0" />
+              <xs:element name="MITIGATION_COST" msprop:Generator_ColumnVarNameInTable="columnMITIGATION_COST" msprop:Generator_ColumnPropNameInRow="MITIGATION_COST" msprop:Generator_ColumnPropNameInTable="MITIGATION_COSTColumn" msprop:Generator_UserColumnName="MITIGATION_COST" type="xs:string" minOccurs="0" />
+              <xs:element name="SUM_IMPACT" msprop:Generator_ColumnVarNameInTable="columnSUM_IMPACT" msprop:Generator_ColumnPropNameInRow="SUM_IMPACT" msprop:Generator_ColumnPropNameInTable="SUM_IMPACTColumn" msprop:Generator_UserColumnName="SUM_IMPACT" type="xs:string" minOccurs="0" />
+              <xs:element name="SUM_MITIGATION" msprop:Generator_ColumnVarNameInTable="columnSUM_MITIGATION" msprop:Generator_ColumnPropNameInRow="SUM_MITIGATION" msprop:Generator_ColumnPropNameInTable="SUM_MITIGATIONColumn" msprop:Generator_UserColumnName="SUM_MITIGATION" type="xs:string" minOccurs="0" />
+              <xs:element name="WHAT_IF_SCENARIO" msprop:Generator_ColumnVarNameInTable="columnWHAT_IF_SCENARIO" msprop:Generator_ColumnPropNameInRow="WHAT_IF_SCENARIO" msprop:Generator_ColumnPropNameInTable="WHAT_IF_SCENARIOColumn" msprop:Generator_UserColumnName="WHAT_IF_SCENARIO" type="xs:string" minOccurs="0" />
+              <xs:element name="AMOUNT_IN_WORDS" msprop:Generator_ColumnVarNameInTable="columnAMOUNT_IN_WORDS" msprop:Generator_ColumnPropNameInRow="AMOUNT_IN_WORDS" msprop:Generator_ColumnPropNameInTable="AMOUNT_IN_WORDSColumn" msprop:Generator_UserColumnName="AMOUNT_IN_WORDS" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
