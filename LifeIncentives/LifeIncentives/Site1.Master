@@ -16,7 +16,7 @@
 
     <!-- Bootstrap core CSS -->
     <link href="/docs/5.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
+       <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
     <!-- Favicons -->
     <link rel="apple-touch-icon" href="/docs/5.0/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
     <link rel="icon" href="/docs/5.0/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
@@ -24,6 +24,17 @@
     <link rel="manifest" href="/docs/5.0/assets/img/favicons/manifest.json">
     <link rel="mask-icon" href="/docs/5.0/assets/img/favicons/safari-pinned-tab.svg" color="#7952b3">
     <link rel="icon" href="/docs/5.0/assets/img/favicons/favicon.ico">
+
+        <link href="Dvendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+    <link href="Dcss/sb-admin-2.min.css" rel="stylesheet">
+    <link href="Dcss/parentDashboard.css" rel="stylesheet"/>
+    <!-- Custom styles for this template-->
+    <link href="Dcss/sb-admin-2.min.css" rel="stylesheet">
+    <link href="Dcss/dashboardStylesheet.css" rel="stylesheet" />
+    <link href="Dcss/childDashboard.css" rel="stylesheet" />
     <meta name="theme-color" content="#7952b3">
 
     <!-- Custom styles for this template-->
@@ -41,48 +52,67 @@
     </asp:ContentPlaceHolder>
 </head>
 <body>
- 
-
     <form id="form1" runat="server">
-        <div style="display:inline-flex">
+    <div class="dashboardparent-wLY" id="406:1435">
+        <div class="lifeincentives-kYt" id="406:1436">
+            <span class="lifeincentives-kYt-sub-0">Life</span>
+            <span class="lifeincentives-kYt-sub-1">Incentives</span>
+        </div>
+        <div class="group-20096-EPW" id="406:1439">
+            <div class="navbar-LSY" id="406:1440">
+                <img class="fluent-people-20-regular-QBW" src="Dimg/parentDash.png" id="406:1567" />
+                <p class="parent-dashboard-Ux4" id="406:1443">
+                    Parent
+                    <br />
+                    Dashboard
+                </p>
+                <div class="line-6-mRN" id="408:1775"></div>
+                       <asp:LinkButton ID="btnPdashboard" runat="server" PostBackUrl="~/childDashboard.aspx">
+                             <asp:Image ID="Image1" runat="server" CssClass="vector-sjJ" ImageUrl="Dimg/home2.png" /> 
+                    <p class="home-Cma" id="406:1571">Home</p>
+                       </asp:LinkButton>
+                      <div class="line-6-Ho2" id="406:1558"></div>
+                <div class="auto-group-bhtx-d6C" id="HnvYbdkukxytoTf8CmBhtx">
+                    <div class="frame-1861-8Yk" id="I406:1440;268:38973"></div>
+                    <asp:LinkButton ID="btnPtransactions" runat="server" PostBackUrl="~/Transactions.aspx" > 
+                        <asp:Image ID="Image3" runat="server" ImageUrl="Dimg/transactionIcon2.png" CssClass="vector-wWC" />  
+                     <p class="transactions-eX6" id="406:1574">Transactions</p>
+                    </asp:LinkButton>
+                    </div>
+               <%-- <div class="auto-group-2rcy-24L" id="23VJxqX8kbv3iFQ2ne2RCY">
+                    <div class="frame-1861-3VE" id="I401:1666;268:38973"></div>
+                    <div class="line-5-A44" id="401:1678"></div>
+                </div>--%>
+                <div class="line-9-TzL" id="408:1770"></div>
+                    <asp:LinkButton ID="LinkButton1" runat="server" PostBackUrl="~/childGoals.aspx">
+                            <asp:Image ID="Image4" runat="server"  CssClass="octicon-trophy-16-Pd6" ImageUrl="Dimg/goalsComp.png" />   
+                      <p class="goals-iQU" id="406:1578">Goals</p>
+                    </asp:LinkButton>
+                <div class="line-10-eJ8" id="408:1771"></div>
+               <asp:LinkButton ID="btnPprofile" runat="server" PostBackUrl="~/childProfile.aspx">
+    <asp:Image ID="Image2" runat="server" ImageUrl="Dimg/profileImg.png" CssClass="vector-Njv" />   
+                    <p class="profile-XMv" id="406:1444">Profile</p>
+               </asp:LinkButton>
+            </div>
+        <asp:LinkButton ID="btnGdashboard" runat="server" >A</asp:LinkButton>
+        <asp:LinkButton ID="btnGtransations" runat="server" >B</asp:LinkButton>
+        <asp:LinkButton ID="btnGgoals" runat="server" >C</asp:LinkButton>
+        <asp:LinkButton ID="btnGprofile" runat="server" >D</asp:LinkButton>
+
+        <%--<div style="display:inline-flex">
              <div id="childSidebar" runat="server" visible="false">
                    <div class="d-flex flex-column flex-shrink-0 p-3 text-white" style="width:200px;height:100%;background-color:#002316">
                         <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
-                          <span class="fs-4" style="font-size:50px;font-family: Quicksand, 'Source Sans Pro'">Child</span>
-                        </a>
-                        <hr>
-                            <ul class="nav nav-pills flex-column mb-auto">
-                              <li class="nav-item">
-                                <a href="#" class="nav-link active" aria-current="page">
-                                  Home
-                                </a>
-                              </li>
-                              <li>
-                                <a href="#" class="nav-link text-white">
-                                  Personal Information
-                                </a>
-                              </li>
-                              <li>
-                                <a href="#" class="nav-link text-white">
-                                  Set Goals
-                                </a>
-                              </li>
-                              <li>
-                                <a href="#" class="nav-link text-white">
-                                    Transactions
-                                </a>
-                              </li>
-                              <li>
-                                <a href="#" class="nav-link text-white">
-                                  Logout
-                                </a>
-                              </li>
-                            </ul>
-                        <hr>
+                         <%-- <span class="fs-4" style="font-size:50px;font-family: Quicksand, 'Source Sans Pro'">Child</span>--%>
+                       <%-- </a>
+                         <div class="dashboardparent-wLY" id="406:1435">
+        <div class="lifeincentives-kYt" id="406:1436">
+            <span class="lifeincentives-kYt-sub-0">Life</span>
+            <span class="lifeincentives-kYt-sub-1">Incentives</span>
                       </div>
-                 </div>
+                 </div>--%>
 
-                <div id="parentSidebar" runat="server" visible="true">
+             <%--   <div id="parentSidebar" runat="server" visible="true">
                    <div class="d-flex flex-column flex-shrink-0 p-3 text-white" style="width:200px;height:100%;background-color:#002316">
                         <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
                           <span class="fs-4" style="font-size:50px;font-family: Quicksand, 'Source Sans Pro'">Parent</span>
@@ -115,8 +145,7 @@
                                 </a>
                               </li>
                             </ul>
-                        <hr>
-                      </div>
+                        <hr>--%>
                  </div>
             <div>
                 <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
@@ -125,5 +154,19 @@
             </div>
         </div>
     </form>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        // Function to handle submission of text
+        function submitText() {
+            var text = document.getElementById("textInput").value;
+            // You can perform further actions with the submitted text here
+            console.log("Submitted Text:", text);
+            // Close the modal
+            $('#myModal').modal('hide');
+        }
+    </script>
 </body>
 </html>
