@@ -185,6 +185,7 @@
     <Content Include="childDashboard.aspx" />
     <Content Include="childGoals.aspx" />
     <Content Include="child_Login.aspx" />
+    <Content Include="ForgotPassword.aspx" />
     <Content Include="I_css\sb-admin-2.css" />
     <Content Include="I_css\sb-admin-2.min.css" />
     <Content Include="I_css\sidebar.css.txt" />
@@ -1922,6 +1923,13 @@
     <Compile Include="child_Login.aspx.vb">
       <DependentUpon>child_Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ForgotPassword.aspx.designer.vb">
+      <DependentUpon>ForgotPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ForgotPassword.aspx.vb">
+      <DependentUpon>ForgotPassword.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="landingPage.aspx.designer.vb">
       <DependentUpon>landingPage.aspx</DependentUpon>

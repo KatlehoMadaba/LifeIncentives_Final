@@ -20,7 +20,7 @@
 
 </head>
 
-<body style="background:linear-gradient(45deg,#002316,white)">
+<body style="background-color:#002316">
         <form id="form1" runat="server">
 
     <div class="container" >
@@ -85,6 +85,7 @@
     <script src="Login%20and%20Sign%20Up%20assets/vendor/jquery-easing/jquery.easing.min.js"></script>
     <!-- Custom scripts for all pages-->
     <script src="Login%20and%20Sign%20Up%20assets/js/sb-admin-2.min.js"></script>
+            <asp:Localize ID="Localize1" runat="server"></asp:Localize>
     </form>
 
 </body> 
