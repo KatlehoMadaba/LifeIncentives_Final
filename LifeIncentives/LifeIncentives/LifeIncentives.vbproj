@@ -94,7 +94,6 @@
   <ItemGroup>
     <Content Include="assets\css\sign-in.css" />
     <Content Include="assets\css\style.css" />
-    <Content Include="childProfile.aspx" />
     <Content Include="Dbootstrap\css\bootstrap-grid.css" />
     <Content Include="Dbootstrap\css\bootstrap-grid.min.css" />
     <Content Include="Dbootstrap\css\bootstrap-grid.rtl.css" />
@@ -253,7 +252,6 @@
     <Content Include="Djs\demo\chart-bar-demo.js" />
     <Content Include="Djs\demo\chart-pie-demo.js" />
     <Content Include="Djs\demo\datatables-demo.js" />
-    <Content Include="Djs\modalJs.js" />
     <Content Include="Djs\sb-admin-2.js" />
     <Content Include="Djs\sb-admin-2.min.js" />
     <Content Include="Dvendor\bootstrap\js\bootstrap.bundle.js" />
@@ -3619,9 +3617,8 @@
     <Content Include="Login and Sign Up assets\vendor\jquery\jquery.min.js" />
     <Content Include="Login and Sign Up assets\vendor\jquery\jquery.slim.js" />
     <Content Include="Login and Sign Up assets\vendor\jquery\jquery.slim.min.js" />
-    <Content Include="parentDashboard.aspx" />
+    <Content Include="parentDash.aspx" />
     <Content Include="parentLogin.aspx" />
-    <Content Include="parentProfile.aspx" />
     <Content Include="Parent_Goals.aspx" />
     <Content Include="PDashboard.aspx" />
     <Content Include="Questions.aspx" />
@@ -3639,8 +3636,10 @@
     <Content Include="T-Images\Request-btn.png" />
     <Content Include="T-Images\tasks.png" />
     <Content Include="T-Images\transaction.png" />
+    <Content Include="Test.aspx" />
     <Content Include="Transactions.aspx" />
     <Content Include="Web.config" />
+    <Content Include="Profile.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Cdashboard.aspx.designer.vb">
@@ -3663,13 +3662,6 @@
     <Compile Include="childGoals.aspx.vb">
       <DependentUpon>childGoals.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="childProfile.aspx.designer.vb">
-      <DependentUpon>childProfile.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="childProfile.aspx.vb">
-      <DependentUpon>childProfile.aspx</DependentUpon>
-      <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="child_Login.aspx.designer.vb">
       <DependentUpon>child_Login.aspx</DependentUpon>
@@ -3712,12 +3704,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="parentDashboard.aspx.designer.vb">
-      <DependentUpon>parentDashboard.aspx</DependentUpon>
+    <Compile Include="parentDash.aspx.designer.vb">
+      <DependentUpon>parentDash.aspx</DependentUpon>
     </Compile>
-    <Compile Include="parentDashboard.aspx.vb">
-      <DependentUpon>parentDashboard.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
+    <Compile Include="parentDash.aspx.vb">
+      <DependentUpon>parentDash.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="parentLogin.aspx.designer.vb">
       <DependentUpon>parentLogin.aspx</DependentUpon>
@@ -3725,13 +3717,6 @@
     <Compile Include="parentLogin.aspx.vb">
       <DependentUpon>parentLogin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="parentProfile.aspx.designer.vb">
-      <DependentUpon>parentProfile.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="parentProfile.aspx.vb">
-      <DependentUpon>parentProfile.aspx</DependentUpon>
-      <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Parent_Goals.aspx.designer.vb">
       <DependentUpon>Parent_Goals.aspx</DependentUpon>
@@ -3774,6 +3759,13 @@
       <DependentUpon>Site1.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="Test.aspx.designer.vb">
+      <DependentUpon>Test.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Test.aspx.vb">
+      <DependentUpon>Test.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="Transactions.aspx.designer.vb">
       <DependentUpon>Transactions.aspx</DependentUpon>
     </Compile>
@@ -3786,6 +3778,12 @@
     <Compile Include="Utility\DBInterface.vb" />
     <Compile Include="Utility\ENTITY.VB" />
     <Compile Include="Utility\genfunctions.vb" />
+    <Compile Include="Profile.aspx.designer.vb">
+      <DependentUpon>Profile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Profile.aspx.vb">
+      <DependentUpon>Profile.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="My Project\Resources.resx">
