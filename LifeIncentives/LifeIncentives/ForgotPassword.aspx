@@ -20,7 +20,7 @@
     <link href="Login%20and%20Sign%20Up%20assets/css/sb-admin-2.min.css" rel="stylesheet" />
 </head>
 
-  <body style="background:linear-gradient(45deg,#002316,white)">
+  <body style="background-color:#002316">
     <div class="container">
 
         <!-- Outer Row -->
@@ -43,10 +43,9 @@
                                         <div>
                                             <label for="EmailTextBox">Email Address:</label>
                                             <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control form-control-user" placeholder="Email Address"></asp:TextBox>
-                                        </div>
-                                       
+                                        </div>                                       
                                         <div>
-                                            <asp:Button ID="LoginButton" runat="server" Text="Send"  CssClass="btn btn-primary btn-user btn-block" />
+                                            <asp:Button ID="LoginButton" runat="server" Text="Send"  CssClass="btn btn-primary btn-user btn-block" style="  margin: 10px"/>
                                         </div>
                                         <div>
                                             <asp:Label ID="Message" Visible="false" runat="server" Text="" ForeColor="Red"></asp:Label>

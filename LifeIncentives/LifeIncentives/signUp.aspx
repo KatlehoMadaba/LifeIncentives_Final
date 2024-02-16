@@ -62,7 +62,7 @@
                                     </div>
                                 </div>
 
-                                <asp:Button ID="Button1" class="btn btn-primary btn-user btn-block" runat="server" Text="Register Parent" OnClick="Register"/>
+                                <asp:Button ID="Button1" class="btn btn-primary btn-user btn-block" runat="server" Text="Register Parent" OnClick="Register" +style="margin: 10px"/>
 
                             <div class="text-center">
                                 <a class="small" href="ForgotPassword.aspx">Forgot Password?</a>
