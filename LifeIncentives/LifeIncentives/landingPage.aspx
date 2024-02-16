@@ -18,13 +18,13 @@
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
-  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet"/>
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet"/>
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet"/>
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet"/>
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet"/>
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet"/>
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet"/>
@@ -98,15 +98,16 @@
 
 
 
-
-            <asp:DropDownList ID="DropDownList" runat="server" CssClass="btn-book">
-                <asp:ListItem Value="0" CssClass="dropdown-item">Login</asp:ListItem>
-                <asp:ListItem Value="1" CssClass="btn">Parent Login</asp:ListItem>
-                <asp:ListItem Value="2" CssClass="btn">Child Login</asp:ListItem>
+<div  class="btn-book animated fadeInUp scrollto" >
+            <asp:DropDownList ID="DropDownList" runat="server" AutoPostBack="true"  onchange="document.location.href = this.value;"  style="background-color:transparent;color:#0D986A ;">
+               
+                <asp:ListItem Value="landingPage.aspx" CssClass="dropdown-item" >Login</asp:ListItem>
+                <asp:ListItem Value="parentLogin.aspx" CssClass="btn" >Parent Login</asp:ListItem>
+                <asp:ListItem Value="child_Login.aspx" CssClass="btn">Child Login</asp:ListItem>
             </asp:DropDownList>
-
-
-            <a href="signUp.aspx" class="btn-book animated fadeInUp scrollto">Sign Up</a>
+</div>
+         
+            <a href="signUp.aspx" class="btn-book animated fadeInUp scrollto" style="color:#0D986A ;font-size: 18px;line-height: 24px;">Sign Up</a>
         </div>
       </div>
     </div>
