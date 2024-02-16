@@ -25,7 +25,7 @@
 
         <!-- Outer Row -->
         <div class="row justify-content-center">
-
+            -
             <div class="col-xl-10 col-lg-12 col-md-9">
 
                 <div class="card o-hidden border-0 shadow-lg my-5">
@@ -52,12 +52,7 @@
                                             <asp:Label ID="Message" Visible="false" runat="server" Text="" ForeColor="Red"></asp:Label>
                                         </div>
                                     </form>
-                                    <div class="text-center">
-                                        <a class="small" href="ForgotPassword.aspx">Forgot Password?</a>
-                                    </div>
-                                    <div class="text-center">
-                                        <a class="small" href="signUp.aspx">Create an Account!</a>
-                                    </div>
+                                
                                 </div>
                             </div>
                         </div>
