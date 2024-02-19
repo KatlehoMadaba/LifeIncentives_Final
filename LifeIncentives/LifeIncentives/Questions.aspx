@@ -25,18 +25,16 @@
 
 
 </head>
-<body>
+<body style="background-color:#002316">
     <form id="form1" runat="server">
     <div>
         <div class="container-fluid ">
             <div class="row">
                 <div class="col-md-10 mx-auto">
-                    <div class="card">
-                        <div class="card-body">
+                    <div class="card" style="background-image:url('https://icmedonline.com/blog/wp-content/uploads/2017/06/MensHealth.jpeg');border-radius: 25px; border: 2px solid #002316;color:darkblue;">
+                        <div class="card-body" >
                             <div class="row">
-                                <div class="col-md-6">
-                                    <img src="Images/P-signup.png" class="img-intro" />
-                                </div>
+
                                 <div class="col-md-6">
                                     <center>
                                         <h1 class="text-w">Please Answer a few more questions....</h1>
@@ -188,12 +186,10 @@
         <div class="container-fluid ">
             <div class="row">
                 <div class="col-md-10 mx-auto">
-                    <div class="card">
+                    <div class="card" style="background-image:url('https://th.bing.com/th/id/OIP.hQivXUt11_9tekCGBivUuwHaE7?rs=1&pid=ImgDetMain');border-radius: 25px; border: 2px solid #002316;color:darkblue;">
                         <div class="card-body">
                             <div class="row">
-                                <div class="col-md-6">
-                                    <img src="Images/P-signup.png" class="img-intro" />
-                                </div>
+
                                 <div class="col-md-6">
                                      <center>
                                         <h1 class="text-w">Additional Expenses </h1>
@@ -281,7 +277,7 @@
                             </div>
                                 <center>
                                                     <div class="button-container">
-                                                                <asp:Button ID="Submit" runat="server" Text="Submit" OnClick="SubmitClick" />                             
+                                                                <asp:Button ID="Submit" runat="server" Text="Submit" OnClick="SubmitClick" style="background-color:transparent;color:#0D986A ;border-radius: 25px; border: 2px solid #cda45e;"/>                             
                                                        </div>                           
                                          </center>
                                     </div>
