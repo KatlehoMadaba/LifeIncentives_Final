@@ -17,7 +17,7 @@
 
     <!-- Custom styles for this template-->
     <link href="Login%20and%20Sign%20Up%20assets/css/sb-admin-2.min.css" rel="stylesheet" /></head>
-  <body style="background-color:#002316">
+  <body style="background:linear-gradient(45deg,#002316,white)">
     <div class="container">
 
         <!-- Outer Row -->
