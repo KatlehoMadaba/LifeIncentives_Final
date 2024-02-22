@@ -23,11 +23,20 @@ Partial Public Class landingPage
     Protected WithEvents form1 As Global.System.Web.UI.HtmlControls.HtmlForm
 
     '''<summary>
-    '''DropDownList control.
+    '''LoginButton control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents DropDownList As Global.System.Web.UI.WebControls.DropDownList
+    Protected WithEvents LoginButton As Global.System.Web.UI.WebControls.Button
+
+    '''<summary>
+    '''SignupButton control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents SignupButton As Global.System.Web.UI.WebControls.Button
 End Class
