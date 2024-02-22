@@ -1,0 +1,87 @@
+﻿<%@ Page Language="vb" AutoEventWireup="false" CodeFile="WebForm1.aspx.vb" Inherits="LifeIncentives.WebForm1" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+
+    <link href="bootstrap-5.3.2-dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/StyleSheet1.css" rel="stylesheet"  />
+    <link href="css/DashboardStyle.css" rel="stylesheet" />
+    <%--fontawesome--%>
+    <link href="fontawesome-free-6.4.2-web/css/all.css" rel="stylesheet" />
+
+    <%--Google fonts--%>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre&display=swap" rel="stylesheet">
+    <link rel = "stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz@9..144&display=swap" rel="stylesheet">
+       <link rel = "stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <%--Google fonts--%>
+
+     <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.snow.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.bubble.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/simple-datatables/style.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+
+                <div>
+        <div class="container-fluid ">
+            <div class="row">
+                <div class="col-md-10 mx-auto">
+                    <div class="card card-curve">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <img src="Images/Landing%20Page.png" class="img-intro"  />
+                            </div>
+                            <div class="col-md-6">
+                                <center>
+                                    <h1 class="text-wel">Welcome</h1>
+                                    <h1 class="text-to text-space">To</h1>
+                                    <h1 class="text-space"><span class="text-Life">Life</span><span class="text-Inc">Incentives</span></h1>
+                                    <div class="btn-space">
+                                        <div class="button-container">
+                                            <asp:Button ID="LoginButton" runat="server" Text="Login" OnClick="LoginButton_Click" CssClass="btn1 btn-curve btntxt-space" Height="50px" Width="220px"/>
+                                            <asp:Button ID="SignupButton" runat="server" Text="Signup" OnClick="SignupButton_Click" CssClass=" btn2 btn-curve" Height="50px" Width="145px"/>
+                                        </div>
+                                    </div>
+                                </center>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        </div>
+    </form>
+    <script src="bootstrap-5.3.2-dist/js/bootstrap.bundle.js"></script>
+    <script src="bootstrap-5.3.2-dist/js/bootstrap.min.js"></script>
+</body>
+</html>
