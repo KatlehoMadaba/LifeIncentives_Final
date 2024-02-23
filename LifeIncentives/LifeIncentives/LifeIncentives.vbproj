@@ -3617,7 +3617,7 @@
     <Content Include="Login and Sign Up assets\vendor\jquery\jquery.min.js" />
     <Content Include="Login and Sign Up assets\vendor\jquery\jquery.slim.js" />
     <Content Include="Login and Sign Up assets\vendor\jquery\jquery.slim.min.js" />
-    <Content Include="parentDash.aspx" />
+    <Content Include="parent.aspx" />
     <Content Include="parentLogin.aspx" />
     <Content Include="Parent_Goals.aspx" />
     <Content Include="PDashboard.aspx" />
@@ -3639,7 +3639,6 @@
     <Content Include="Test.aspx" />
     <Content Include="Transactions.aspx" />
     <Content Include="Web.config" />
-    <Content Include="Profile.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Cdashboard.aspx.designer.vb">
@@ -3704,11 +3703,11 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="parentDash.aspx.designer.vb">
-      <DependentUpon>parentDash.aspx</DependentUpon>
+    <Compile Include="parent.aspx.designer.vb">
+      <DependentUpon>parent.aspx</DependentUpon>
     </Compile>
-    <Compile Include="parentDash.aspx.vb">
-      <DependentUpon>parentDash.aspx</DependentUpon>
+    <Compile Include="parent.aspx.vb">
+      <DependentUpon>parent.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="parentLogin.aspx.designer.vb">
@@ -3778,12 +3777,6 @@
     <Compile Include="Utility\DBInterface.vb" />
     <Compile Include="Utility\ENTITY.VB" />
     <Compile Include="Utility\genfunctions.vb" />
-    <Compile Include="Profile.aspx.designer.vb">
-      <DependentUpon>Profile.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Profile.aspx.vb">
-      <DependentUpon>Profile.aspx</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="My Project\Resources.resx">

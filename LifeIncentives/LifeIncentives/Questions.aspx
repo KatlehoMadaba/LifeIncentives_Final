@@ -82,8 +82,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
-<%--                                        <div id="Funding" runat="server" visible="false">
+                                       <div id="NoPayFees" runat="server" visible="false">
                                             <div class="row">
                                                 <div class="col-md-12">
                                                     <label class="lbl-text">What is your funding system</label>
@@ -95,7 +94,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>--%>
+                                        </div>
                                     <div class="row">
                                         <div class="col-md-12">
                                             <label class="lbl-text">Do you pay for stationery(books,pens,etc)</label>

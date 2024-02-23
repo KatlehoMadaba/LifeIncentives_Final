@@ -68,6 +68,24 @@ Partial Public Class Questions
     Protected WithEvents TextBox6 As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
+    '''NoPayFees control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents NoPayFees As Global.System.Web.UI.HtmlControls.HtmlGenericControl
+
+    '''<summary>
+    '''RadioButtonList7 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents RadioButtonList7 As Global.System.Web.UI.WebControls.RadioButtonList
+
+    '''<summary>
     '''RadioButtonList3 control.
     '''</summary>
     '''<remarks>

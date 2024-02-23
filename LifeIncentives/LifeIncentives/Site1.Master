@@ -48,12 +48,11 @@
     </style>
 
     <asp:ContentPlaceHolder ID="head" runat="server">
-        
     </asp:ContentPlaceHolder>
 </head>
 <body>
     <form id="form1" runat="server">
-    <div class="dashboardparent-wLY" id="406:1435">
+   <%-- <div class="dashboardparent-wLY" id="406:1435">
         <div class="lifeincentives-kYt" id="406:1436">
             <span class="lifeincentives-kYt-sub-0">Life</span>
             <span class="lifeincentives-kYt-sub-1">Incentives</span>
@@ -83,7 +82,7 @@
                     <div class="frame-1861-3VE" id="I401:1666;268:38973"></div>
                     <div class="line-5-A44" id="401:1678"></div>
                 </div>--%>
-                <div class="line-9-TzL" id="408:1770"></div>
+                <%--<div class="line-9-TzL" id="408:1770"></div>
                     <asp:LinkButton ID="LinkButton1" runat="server" PostBackUrl="~/childGoals.aspx">
                             <asp:Image ID="Image4" runat="server"  CssClass="octicon-trophy-16-Pd6" ImageUrl="Dimg/goalsComp.png" />   
                       <p class="goals-iQU" id="406:1578">Goals</p>
@@ -97,7 +96,7 @@
         <asp:LinkButton ID="btnGdashboard" runat="server" >A</asp:LinkButton>
         <asp:LinkButton ID="btnGtransations" runat="server" >B</asp:LinkButton>
         <asp:LinkButton ID="btnGgoals" runat="server" >C</asp:LinkButton>
-        <asp:LinkButton ID="btnGprofile" runat="server" >D</asp:LinkButton>
+        <asp:LinkButton ID="btnGprofile" runat="server" >D</asp:LinkButton>--%>--%>
 
         <%--<div style="display:inline-flex">
              <div id="childSidebar" runat="server" visible="false">

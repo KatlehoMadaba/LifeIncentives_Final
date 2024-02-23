@@ -7,7 +7,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
        <img class="rectangle-508-5BJ" src="Dimg/" id="407:1681" />
         <div class="group-20127-nbW" id="407:1682">
-            <div class="group-20125-WnQ" id="407:1683">
+            <div class="group-20125-WnQ" id="407:1683">   
                 <div class="group-20118-FV6" id="407:1684">
                     <p class="parent-incentives-9qN" id="407:1691">Parent Incentives</p>
                     <div class="auto-group-dr1n-3fr" id="AX3e7JhoCx88YWkojDDR1N">
@@ -102,16 +102,6 @@
             <br />
         </p>
         <div class="steps-21J" id="407:1723">
-          <%--  <img class="tdesign-money-wPA" src="Dimg" id="407:1724" />
-            <img class="ellipse-23-fKA" src="Dimg" id="407:1727" />
-            <img class="ellipse-25-zcL" src="Dimg" id="407:1728" />
-            <img class="ellipse-24-LRJ" src="Dimg" id="407:1729" />
-            <div class="item-3785-H5e" id="407:1730">3785</div>
-            <div class="r3785-AfE" id="407:1731">R3785</div>
-            <div class="group-24-fbz" id="407:1732">
-                <img class="vector-muv" src="Dimg" id="407:1733" />
-                <img class="vector-5vc" src="Dimg" id="407:1734" />--%>
-          <%--  </div>--%>
                <div class="container" style="margin-left:7%">
     <div class="row">
         <div class="col-md-3 col-sm-6">

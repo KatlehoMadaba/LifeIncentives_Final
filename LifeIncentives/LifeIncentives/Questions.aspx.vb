@@ -13,8 +13,18 @@ Public Class Questions
     Protected Sub RadioButtonList2_SelectedIndexChanged1(sender As Object, e As EventArgs)
         If RadioButtonList2.SelectedValue = "Yes" Then
             PayFees.Visible = True
-        Else
+            NoPayFees.Visible = False
+            Session("Funding_Type") = "Self-Funded"
+        ElseIf RadioButtonList2.SelectedValue = "No" Then
+            NoPayFees.Visible = True
             PayFees.Visible = False
+        End If
+    End Sub
+    Protected Sub RadioButtonList7_SelectedIndexChanged(sender As Object, e As EventArgs) Handles RadioButtonList7.SelectedIndexChanged
+        If RadioButtonList7.SelectedValue = "Bursary" Then
+            Session("Funding_Type") = "Bursary"
+        ElseIf RadioButtonList2.SelectedValue = "Goverment" Then
+            Session("Funding_Type") = "Goverment"
         End If
     End Sub
 
@@ -87,25 +97,41 @@ Public Class Questions
 
     Dim fi As New TBL_Financial_Information
 
+    ' fi.Financial_Information_ID = Guid.NewGuid.ToString
+
+    'Session("childID") = cu.Child_ID ' Session created 
+
+    'Session("financialId") = fi.Child_ID ' Session created 
+
     Protected Sub SubmitClick(sender As Object, e As EventArgs)
 
 
         fi.Financial_Information_ID = Guid.NewGuid.ToString
+        Session("financialId") = fi.Financial_Information_ID ' Session created 
+        fi.Parent_ID = Session("Parent_ID")
+        fi.Child_ID = Session("childID")
+
 
         fi.School_Level = RadioButtonList6.SelectedValue
         fi.School_Type = RadioButtonList12.SelectedValue
 
         fi.School_Fees_Funding_Status = RadioButtonList2.SelectedValue
         If fi.School_Fees_Funding_Status = "Yes" Then
-            fi.School_Fees_Price = TextBox6.Text
+            fi.School_Fees_Price = Double.Parse(TextBox6.Text.Trim())
+            Session("Funding_Type") = "Self-Funded"
 
-        Else
-            fi.School_Fees_Price = 0
+        ElseIf fi.School_Fees_Funding_Status = "No" Then
+            Select Case RadioButtonList7.SelectedValue
+                Case "Bursary"
+                    fi.School_Fees_Price = 0
+                Case "Goverment"
+                    fi.School_Fees_Price = 33026.4
+            End Select
         End If
 
         fi.Stationery_Funding_Status = RadioButtonList3.SelectedValue
         If fi.Stationery_Funding_Status = "Yes" Then
-            fi.Stationery_Price = TextBox7.Text
+            fi.Stationery_Price = Double.Parse(TextBox7.Text.Trim())
 
         Else
             fi.Stationery_Price = 0
@@ -113,7 +139,7 @@ Public Class Questions
 
         fi.Allowance_Status = RadioButtonList4.SelectedValue
         If fi.Allowance_Status = "Yes" Then
-            fi.Allowance_Price = TextBox8.Text
+            fi.Allowance_Price = Double.Parse(TextBox8.Text.Trim())
         Else
             fi.Allowance_Price = 0
         End If
@@ -128,7 +154,7 @@ Public Class Questions
 
         fi.Accommodation_Status = RadioButtonList13.SelectedValue
         If fi.Accommodation_Status = "Yes" Then
-            fi.Accommodation_Price = TextBox10.Text
+            fi.Accommodation_Price = Double.Parse(TextBox10.Text.Trim())
 
         Else
             fi.Accommodation_Price = 0
@@ -136,7 +162,7 @@ Public Class Questions
 
         fi.Membership_Status = RadioButtonList8.SelectedValue
         If fi.Membership_Status = "Yes" Then
-            fi.Membership_Price = TextBox11.Text
+            fi.Membership_Price = Double.Parse(TextBox11.Text.Trim())
 
         Else
             fi.Membership_Price = 0
@@ -144,7 +170,7 @@ Public Class Questions
 
         fi.ExternalClasses_Status = RadioButtonList9.SelectedValue
         If fi.ExternalClasses_Status = "Yes" Then
-            fi.ExternalClass_Prices = TextBox12.Text
+            fi.ExternalClass_Prices = Double.Parse(TextBox12.Text.Trim())
 
         Else
             fi.ExternalClass_Prices = 0
@@ -152,7 +178,7 @@ Public Class Questions
 
         fi.Gadgets_Status = RadioButtonList10.SelectedValue
         If fi.Gadgets_Status = "Yes" Then
-            fi.Gadgets_Price = TextBox13.Text
+            fi.Gadgets_Price = Double.Parse(TextBox13.Text.Trim())
 
         Else
             fi.Gadgets_Price = 0
@@ -160,19 +186,27 @@ Public Class Questions
 
         fi.Celebration_Status = RadioButtonList11.SelectedValue
         If fi.Celebration_Status = "Yes" Then
-            fi.Celebration_Price = TextBox14.Text
+            fi.Celebration_Price = Double.Parse(TextBox14.Text.Trim())
 
         Else
             fi.Celebration_Price = 0
         End If
 
         fi.update()
+        If True Then
 
-        Response.Redirect("Login.aspx")
+        End If
+        Response.Redirect("PDashboard.aspx")
 
     End Sub
 
+    Protected Sub YearlyGoal(sender As Object, e As EventArgs)
 
+    End Sub
+
+    Protected Sub RadioBntfunded_SelectedIndexChanged(sender As Object, e As EventArgs)
+
+    End Sub
 
 
 End Class

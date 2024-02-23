@@ -14,6 +14,7 @@
     Protected Sub ParentRegister(sender As Object, e As EventArgs)
 
         pu.Parent_ID = Guid.NewGuid.ToString
+        Session("Parent_ID") = pu.Parent_ID.ToString()
         pu.Parent_Name = FirstName.Text
         pu.Parent_Surname = LastName.Text
         pu.Email = Email.Text
@@ -25,6 +26,7 @@
         pu.update()
 
         Response.Redirect("Questions.aspx")
+        'Response.Redirect("Pdashboard.aspx")
 
     End Sub
 

@@ -74,7 +74,7 @@
         border-radius: 50%;
         background: #ffffff;
         font-size: 24px;
-        color: #d10b4f;
+        color: #0047FF;
         line-height: 135px;
         text-align: center;
         position: absolute;
@@ -83,7 +83,7 @@
     }
 
     .progressCircle.blue .progressCircle-bar {
-        border-color: #d10b4f;
+        border-color: #0047FF;
     }
 
     .progressCircle.blue .progressCircle-left .progressCircle-bar {

@@ -22,9 +22,7 @@ Public Class signUp
         cu.Child_Surname = ChildSurname.Text
         cu.Child_Age = Integer.Parse(ChildAge.Text)
         cu.Child_Password = ChildPassword.Text
-
         Session("childID") = cu.Child_ID ' Session created 
-
         cu.update()
 
         Response.Redirect("signUpParent.aspx")

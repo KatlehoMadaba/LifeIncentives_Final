@@ -3,15 +3,17 @@
 Public Class TBL_Incentives
     inherits Entity
 
-    Public Shared Display_Incentives_ID as Boolean = true
-    Public Shared Display_Child_ID as Boolean = true
+    Public Shared Display_Incentives_ID as Boolean = True
+    Public Shared Display_Child_ID As Boolean = True
+    Public Shared Display_Financial_Information_ID As Boolean = True
     Public Shared Display_Incentive_Type as Boolean = true
     Public Shared Display_Incentive_Increase as Boolean = true
     Public Shared Display_Incentive_Decrease as Boolean = true
     Public Shared Display_Incentive_Amount as Boolean = true
 
-    Private I_Display_Incentives_ID as Boolean = true
-    Private I_Display_Child_ID as Boolean = true
+    Private I_Display_Incentives_ID as Boolean = True
+    Private I_Display_Child_ID As Boolean = True
+    Private I_Display_Financial_Information_ID As Boolean = True
     Private I_Display_Incentive_Type as Boolean = true
     Private I_Display_Incentive_Increase as Boolean = true
     Private I_Display_Incentive_Decrease as Boolean = true
@@ -21,6 +23,7 @@ Public Class TBL_Incentives
 
     Public Incentives_ID As System.String
     Public Child_ID As System.String
+    Public Financial_Information_ID As System.String
     Public Incentive_Type as System.String
     Public Incentive_Increase as nullable(of System.Int32)
     Public Incentive_Decrease as nullable(of System.Int32)
@@ -30,6 +33,7 @@ Public Class TBL_Incentives
     Shared Sub Set_Display_Field_All(display_flag as boolean)
         Display_Incentives_ID = display_flag
         Display_Child_ID = display_flag
+        Display_Financial_Information_ID = display_flag
         Display_Incentive_Type = display_flag
         Display_Incentive_Increase = display_flag
         Display_Incentive_Decrease = display_flag
@@ -42,13 +46,14 @@ Public Class TBL_Incentives
         cmd.Connection = HttpContext.Current.Session("conn")
         If Not IsNothing(HttpContext.Current.Session("trans")) Then cmd.Transaction = HttpContext.Current.Session("trans")
         cmd.CommandType = CommandType.Text
-        cmd.CommandText = "insert into TBL_Incentives (Incentives_ID,Child_ID,Incentive_Type,Incentive_Increase,Incentive_Decrease,Incentive_Amount)"
-        cmd.CommandText = cmd.CommandText & "values(@Incentives_ID,@Child_ID,@Incentive_Type,@Incentive_Increase,@Incentive_Decrease,@Incentive_Amount)"
-
+        cmd.CommandText = "insert into TBL_Incentives (Incentives_ID,Child_ID,Financial_Information_ID,Incentive_Type,Incentive_Increase,Incentive_Decrease,Incentive_Amount)"
+        cmd.CommandText = cmd.CommandText & "values(@Incentives_ID,@Child_ID,@Financial_Information_ID,@Incentive_Type,@Incentive_Increase,@Incentive_Decrease,@Incentive_Amount)"
         cmd.Parameters.Add("@Incentives_ID", 22, 255, "Incentives_ID")
-        cmd.Parameters("@Incentives_ID").Value = SetNull(Incentives_ID)
+        cmd.Parameters("@Incentives_ID").Value = setNull(Incentives_ID)
         cmd.Parameters.Add("@Child_ID", 22, 255, "Child_ID")
-        cmd.Parameters("@Child_ID").Value = SetNull(Child_ID)
+        cmd.Parameters("@Child_ID").Value = setNull(Child_ID)
+        cmd.Parameters.Add("@Financial_Information_ID", 22, 255, "Financial_Information_ID")
+        cmd.Parameters("@Financial_Information_ID").Value = setNull(Financial_Information_ID)
         cmd.Parameters.Add("@Incentive_Type", 22, 50, "Incentive_Type")
         cmd.Parameters("@Incentive_Type").Value = SetNull(Incentive_Type)
         cmd.Parameters.Add("@Incentive_Increase", 8, 0, "Incentive_Increase")
@@ -56,9 +61,7 @@ Public Class TBL_Incentives
         cmd.Parameters.Add("@Incentive_Decrease", 8, 0, "Incentive_Decrease")
         cmd.Parameters("@Incentive_Decrease").Value = SetNull(Incentive_Decrease)
         cmd.Parameters.Add("@Incentive_Amount", 6, 0, "Incentive_Amount")
-        cmd.Parameters("@Incentive_Amount").Value = SetNull(Incentive_Amount)
-
-
+        cmd.Parameters("@Incentive_Amount").Value = setNull(Incentive_Amount)
         cmd.ExecuteNonQuery()
         newinstance = False
     End Sub
@@ -84,8 +87,9 @@ Public Class TBL_Incentives
         cmd.CommandType = CommandType.Text
         cmd.CommandText = "select "
         cmd.CommandText = cmd.CommandText & "Incentives_ID,"
-        if Display_Child_ID = true then cmd.CommandText = cmd.CommandText & "Child_ID,"
-        if Display_Incentive_Type = true then cmd.CommandText = cmd.CommandText & "Incentive_Type,"
+        If Display_Child_ID = True Then cmd.CommandText = cmd.CommandText & "Child_ID,"
+        If Display_Financial_Information_ID = True Then cmd.CommandText = cmd.CommandText & "Financial_Information_ID,"
+        If Display_Incentive_Type = true then cmd.CommandText = cmd.CommandText & "Incentive_Type,"
         if Display_Incentive_Increase = true then cmd.CommandText = cmd.CommandText & "Incentive_Increase,"
         if Display_Incentive_Decrease = true then cmd.CommandText = cmd.CommandText & "Incentive_Decrease,"
         if Display_Incentive_Amount = true then cmd.CommandText = cmd.CommandText & "Incentive_Amount,"
@@ -103,7 +107,9 @@ Public Class TBL_Incentives
             p.I_Display_Incentives_ID = Display_Incentives_ID
             if Display_Child_ID = true then p.Child_ID = checknull(dt.Rows(i)("Child_ID"))
             p.I_Display_Child_ID = Display_Child_ID
-            if Display_Incentive_Type = true then p.Incentive_Type = checknull(dt.Rows(i)("Incentive_Type"))
+            If Display_Financial_Information_ID = True Then p.Financial_Information_ID = checkNull(dt.Rows(i)("Financial_Information_ID"))
+            p.I_Display_Financial_Information_ID = Display_Financial_Information_ID
+            If Display_Incentive_Type = true then p.Incentive_Type = checknull(dt.Rows(i)("Incentive_Type"))
             p.I_Display_Incentive_Type = Display_Incentive_Type
             if Display_Incentive_Increase = true then p.Incentive_Increase = checknull(dt.Rows(i)("Incentive_Increase"))
             p.I_Display_Incentive_Increase = Display_Incentive_Increase
@@ -131,8 +137,9 @@ Public Class TBL_Incentives
         cmd.CommandType = CommandType.Text
         cmd.CommandText = "update TBL_Incentives set "
         cmd.CommandText = cmd.CommandText & " Incentives_ID=@Incentives_ID,"
-        if I_Display_Child_ID = true then cmd.CommandText = cmd.CommandText & " Child_ID=@Child_ID,"
-        if I_Display_Incentive_Type = true then cmd.CommandText = cmd.CommandText & " Incentive_Type=@Incentive_Type,"
+        If I_Display_Child_ID = True Then cmd.CommandText = cmd.CommandText & " Child_ID=@Child_ID,"
+        If I_Display_Financial_Information_ID = True Then cmd.CommandText = cmd.CommandText & " Financial_Information_ID=@Financial_Information_ID,"
+        If I_Display_Incentive_Type = true then cmd.CommandText = cmd.CommandText & " Incentive_Type=@Incentive_Type,"
         if I_Display_Incentive_Increase = true then cmd.CommandText = cmd.CommandText & " Incentive_Increase=@Incentive_Increase,"
         if I_Display_Incentive_Decrease = true then cmd.CommandText = cmd.CommandText & " Incentive_Decrease=@Incentive_Decrease,"
         if I_Display_Incentive_Amount = true then cmd.CommandText = cmd.CommandText & " Incentive_Amount=@Incentive_Amount,"
@@ -141,12 +148,15 @@ Public Class TBL_Incentives
 
 
         cmd.Parameters.Add("@Incentives_ID", 22, 255, "Incentives_ID")
-        cmd.Parameters("@Incentives_ID").Value = SetNull(Incentives_ID)
+        cmd.Parameters("@Incentives_ID").Value = setNull(Incentives_ID)
 
         If I_Display_Child_ID = True Then cmd.Parameters.Add("@Child_ID", 22, 255, "Child_ID")
-        If I_Display_Child_ID = true then cmd.Parameters("@Child_ID").Value = SetNull(Child_ID)
+        If I_Display_Child_ID = True Then cmd.Parameters("@Child_ID").Value = setNull(Child_ID)
 
-        if I_Display_Incentive_Type = true then cmd.Parameters.Add("@Incentive_Type", 22, 50, "Incentive_Type")
+        If I_Display_Financial_Information_ID = True Then cmd.Parameters.Add("@Financial_Information_ID", 22, 255, "Financial_Information_ID")
+        If I_Display_Financial_Information_ID = True Then cmd.Parameters("@Financial_Information_ID").Value = setNull(Financial_Information_ID)
+
+        If I_Display_Incentive_Type = true then cmd.Parameters.Add("@Incentive_Type", 22, 50, "Incentive_Type")
         if I_Display_Incentive_Type = true then cmd.Parameters("@Incentive_Type").Value = SetNull(Incentive_Type)
 
         if I_Display_Incentive_Increase = true then cmd.Parameters.Add("@Incentive_Increase", 8, 0, "Incentive_Increase")
@@ -178,8 +188,9 @@ Public Class TBL_Incentives
         cmd.CommandType = CommandType.Text
         cmd.CommandText = "select "
         cmd.CommandText = cmd.CommandText & "Incentives_ID,"
-        if Display_Child_ID = true then cmd.CommandText = cmd.CommandText & "Child_ID,"
-        if Display_Incentive_Type = true then cmd.CommandText = cmd.CommandText & "Incentive_Type,"
+        If Display_Child_ID = True Then cmd.CommandText = cmd.CommandText & "Child_ID,"
+        If Display_Financial_Information_ID = True Then cmd.CommandText = cmd.CommandText & "Financial_Information_ID,"
+        If Display_Incentive_Type = true then cmd.CommandText = cmd.CommandText & "Incentive_Type,"
         if Display_Incentive_Increase = true then cmd.CommandText = cmd.CommandText & "Incentive_Increase,"
         if Display_Incentive_Decrease = true then cmd.CommandText = cmd.CommandText & "Incentive_Decrease,"
         if Display_Incentive_Amount = true then cmd.CommandText = cmd.CommandText & "Incentive_Amount,"
@@ -194,7 +205,9 @@ Public Class TBL_Incentives
             p.I_Display_Incentives_ID = Display_Incentives_ID
             if Display_Child_ID = true then p.Child_ID = checknull(dt.Rows(i)("Child_ID"))
             p.I_Display_Child_ID = Display_Child_ID
-            if Display_Incentive_Type = true then p.Incentive_Type = checknull(dt.Rows(i)("Incentive_Type"))
+            If Display_Financial_Information_ID = True Then p.Financial_Information_ID = checkNull(dt.Rows(i)("Financial_Information_ID"))
+            p.I_Display_Financial_Information_ID = Display_Financial_Information_ID
+            If Display_Incentive_Type = true then p.Incentive_Type = checknull(dt.Rows(i)("Incentive_Type"))
             p.I_Display_Incentive_Type = Display_Incentive_Type
             if Display_Incentive_Increase = true then p.Incentive_Increase = checknull(dt.Rows(i)("Incentive_Increase"))
             p.I_Display_Incentive_Increase = Display_Incentive_Increase
