@@ -20,7 +20,7 @@
 
 </head>
 
-<body style="background-color:#002316">
+<body style="background:#002316">
         <form id="form1" runat="server">
 
     <div class="container" >
@@ -62,7 +62,7 @@
                                     </div>
                                 </div>
 
-                                <asp:Button ID="Button1" class="btn btn-primary btn-user btn-block" runat="server" Text="Register Parent" OnClick="Register" +style="margin: 10px"/>
+                                <asp:Button ID="Button1" class="btn btn-primary btn-user btn-block" runat="server" Text="Register Parent" OnClick="Register"/>
 
                             <div class="text-center">
                                 <a class="small" href="ForgotPassword.aspx">Forgot Password?</a>
@@ -85,7 +85,6 @@
     <script src="Login%20and%20Sign%20Up%20assets/vendor/jquery-easing/jquery.easing.min.js"></script>
     <!-- Custom scripts for all pages-->
     <script src="Login%20and%20Sign%20Up%20assets/js/sb-admin-2.min.js"></script>
-            <asp:Localize ID="Localize1" runat="server"></asp:Localize>
     </form>
 
 </body> 

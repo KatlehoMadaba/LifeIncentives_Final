@@ -1,83 +1,116 @@
 ﻿<%@ Language="vb" AutoEventWireup="false" CodeBehind="parentLogin.aspx.vb" Inherits="LifeIncentives.parentLogin" %>
 
+
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    
-    <meta charset="utf-8"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <title></title>
 
+    <link href="bootstrap-5.3.2-dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/StyleSheet1.css" rel="stylesheet"  />
+    <link href="css/DashboardStyle.css" rel="stylesheet" />
+    <%--fontawesome--%>
+    <link href="fontawesome-free-6.4.2-web/css/all.css" rel="stylesheet" />
 
-    <title>SB Admin 2 - Register</title>
+    <%--Google fonts--%>
 
-    <!-- Custom fonts for this template-->
-    <link href="Login%20and%20Sign%20Up%20assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet"  type="text/css"/>
-    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre&display=swap" rel="stylesheet"/>
+    <link rel = "stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz@9..144&display=swap" rel="stylesheet"/>
+       <link rel = "stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"/>
 
-    <!-- Custom styles for this template-->
-    <link href="Login%20and%20Sign%20Up%20assets/css/sb-admin-2.min.css" rel="stylesheet" />
+    <%--Google fonts--%>
+
+     <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon"/>
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon"/>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet"/>
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet"/>
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet"/>
+  <link href="assets/vendor/quill/quill.snow.css" rel="stylesheet"/>
+  <link href="assets/vendor/quill/quill.bubble.css" rel="stylesheet"/>
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet"/>
+  <link href="assets/vendor/simple-datatables/style.css" rel="stylesheet"/>
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet"/>
+
 </head>
+<body>
+    <form id="form1" runat="server">
+        <div>
 
-  <body style="background-color:#002316">
-    <div class="container">
+                <div>
+        <div class="container-fluid ">
+            <div class="row">
+                <div class="col-md-10 mx-auto">
+                    <div class="card">
+                        <div class="card-body">
+                             
 
-        <!-- Outer Row -->
-        <div class="row justify-content-center">
-
-            <div class="col-xl-10 col-lg-12 col-md-9">
-
-                <div class="card o-hidden border-0 shadow-lg my-5">
-                    <div class="card-body p-0">
-                        <!-- Nested Row within Card Body -->
-                        <div class="row">
-                            <div class="col-lg-6 d-none d-lg-block bg-login-image"></div>
-                            <div class="col-lg-6">
-                                <div class="p-5">
-                                    <div class="text-center">
-                                        <h1 class="h4 text-gray-900 mb-4">Welcome Back Parent!</h1>
-                                    </div>
-                                    <form id="LoginForm" runat="server">
-                                        <div>
-                                            <label for="EmailTextBox">Email Address:</label>
-                                            <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control form-control-user" placeholder="Email Address"></asp:TextBox>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <img src="Images/C-Signup.png" class="img-intro"/>
+                                </div>
+                                <div class="col-md-6">
+                                    <center>
+                                        <h1 class="text-wel text-space">Welcome</h1>
+                                    </center>
+                                    <center>
+                                        <h1 class="text-wel text-In">To</h1>
+                                    </center>
+                                    <center>
+                                        <div class="row">
+                                             <h1 class="text-wel text-space">Parent<span class="text-In">Login</span></h1>
                                         </div>
-                                        <div>
-                                            <label for="PasswordTextBox">Password:</label>
-                                            <asp:TextBox ID="txtPassword" runat="server" TextMode="Password" CssClass="form-control form-control-user" placeholder="Password"></asp:TextBox>
+                                      <div class="row">
+                                            <div class="col-md-12">
+                                                <asp:Label ID="lblUsername" runat="server" Text="Username"><span class="lbl-text">Enter Your Name</span></asp:Label>
+                                                <div class="form-group">
+                                                    <asp:TextBox class="form-control" ID="TextBox1" runat="server"></asp:TextBox>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div>
-                                            <asp:Button ID="LoginButton" runat="server" Text="Login" OnClick="Login_Click" CssClass="btn btn-primary btn-user btn-block" style="  margin: 10px"/>
+                                       <div class="row">
+                                            <div class="col-md-12">
+                                                <asp:Label ID="lblCode" runat="server" Text="lblCode"><span class="lbl-text">Child Id Number</span></asp:Label>
+                                                <div class="form-group">
+                                                    <asp:TextBox class="form-control" ID="TextBox2" runat="server"></asp:TextBox>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div>
-                                            <asp:Label ID="Message" Visible="false" runat="server" Text="" ForeColor="Red"></asp:Label>
+                                    </center>
+                                    <center>
+                                        <div class="btn-space">
+                                            <div class="button-container">
+                                                <asp:Button ID="btnParentLogin" runat="server" Text="Login" CssClass="btn1 btn-curve btntxt-space" Height="50px" Width="220px" />
+                                                <asp:Button ID="btnChildLogin" runat="server" OnClick="btnChildLogin_Click" Text="Child" CssClass=" btn2 btn-curve" Height="50px" Width="145px"/>
+                                            </div>
                                         </div>
-                                    </form>
-                                    <div class="text-center">
-                                        <a class="small" href="ForgotPassword.aspx">Forgot Password?</a>
-                                    </div>
-                                    <div class="text-center">
-                                        <a class="small" href="signUp.aspx">Create an Account!</a>
-                                    </div>
+                                    </center>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
             </div>
+        </div>
+    </div>
 
         </div>
-
-    </div>
-  
-    <!-- Bootstrap core JavaScript-->
-    <script src="Login%20and%20Sign%20Up%20assets/vendor/jquery/jquery.min.js"></script>
-    <script src="Login%20and%20Sign%20Up%20assets/vendor/bootstrap/js/bootstrap.bundle.js"></script>
-    <!-- Core plugin JavaScript-->
-    <script src="Login%20and%20Sign%20Up%20assets/vendor/jquery-easing/jquery.easing.min.js"></script>
-    <!-- Custom scripts for all pages-->
-    <script src="Login%20and%20Sign%20Up%20assets/js/sb-admin-2.min.js"></script>
-  </body>  
+    </form>
+    <script src="bootstrap-5.3.2-dist/js/bootstrap.bundle.js"></script>
+    <script src="bootstrap-5.3.2-dist/js/bootstrap.min.js"></script>
+</body>
 </html>
