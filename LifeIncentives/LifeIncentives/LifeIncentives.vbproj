@@ -185,6 +185,10 @@
     <Content Include="childDashboard.aspx" />
     <Content Include="childGoals.aspx" />
     <Content Include="child_Login.aspx" />
+    <Content Include="css\DashboardStyle.css" />
+    <Content Include="css\ProgressBar.css" />
+    <Content Include="css\sidebarstyle.css" />
+    <Content Include="css\StyleSheet1.css" />
     <Content Include="ForgotPassword.aspx" />
     <Content Include="I_css\sb-admin-2.css" />
     <Content Include="I_css\sb-admin-2.min.css" />
