@@ -12,6 +12,6 @@
 
     Protected Sub SignupButton_Click(ByVal sender As Object, ByVal e As EventArgs)
         ' Redirect to the parentLogin.aspx page or add your login logic here
-        Response.Redirect("parentLogin.aspx")
+        Response.Redirect("signUp.aspx")
     End Sub
 End Class

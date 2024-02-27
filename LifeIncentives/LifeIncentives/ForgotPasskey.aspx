@@ -1,4 +1,4 @@
-﻿<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="ForgotPasskey.aspx.vb" Inherits="LifeIncentives.ForgotPasskey" %>
+﻿<%@ Page Language="vb" AutoEventWireup="false" Codefile="ForgotPasskey.aspx.vb" Inherits="LifeIncentives.ForgotPasskey" %>
 
 <!DOCTYPE html>
 

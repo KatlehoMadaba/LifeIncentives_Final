@@ -5,20 +5,24 @@ Public Class child_Login
     Inherits System.Web.UI.Page
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
-        If IsNothing(HttpContext.Current.Session("conn")) Then
-            HttpContext.Current.Session("conn") = DBInterface.connect(ConfigurationManager.ConnectionStrings("conn2").ConnectionString)
-        End If
-    End Sub
-
-
-    Protected Sub Login_Click(sender As Object, e As EventArgs)
-        Dim Name As String = txtName.Text
-        Dim Password As String = txtPassword.Text
 
     End Sub
 
+    Protected Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TextBox1.TextChanged
+
+    End Sub
+
+    Protected Sub TextBox2_TextChanged(sender As Object, e As EventArgs) Handles TextBox2.TextChanged
+
+    End Sub
+
+    Protected Sub btnChildLogin_Click(sender As Object, e As EventArgs) Handles btnChildLogin.Click
+
+    End Sub
+
+    Protected Sub btnParentLogin_Click(sender As Object, e As EventArgs) Handles btnParentLogin.Click
+        Response.Redirect("parentLogin.aspx")
 
 
-
-
+    End Sub
 End Class

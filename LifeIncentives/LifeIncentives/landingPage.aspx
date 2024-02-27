@@ -67,7 +67,8 @@
                                     <div class="btn-space">
                                         <div class="button-container">
                                             <asp:Button ID="LoginButton" runat="server" Text="Login" OnClick="btnLogin_Click" CssClass="btn1 btn-curve btntxt-space" Height="50px" Width="220px"/>
-                                            <asp:Button ID="SignupButton" runat="server" Text="Signup" href="signUp.aspx" CssClass=" btn2 btn-curve" Height="50px" Width="145px"/>
+                                            <asp:Button ID="SignupButton" runat="server" Text="Signup" CssClass=" btn2 btn-curve" Height="50px" Width="145px"/>
+
                                         </div>
                                     </div>
 

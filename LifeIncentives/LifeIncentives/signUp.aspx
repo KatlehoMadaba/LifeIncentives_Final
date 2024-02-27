@@ -20,7 +20,7 @@
 
 </head>
 
-<body style="background:linear-gradient(45deg,#002316,white)">
+<body style="background:#002316">
         <form id="form1" runat="server">
 
     <div class="container" >
@@ -62,8 +62,7 @@
                                     </div>
                                 </div>
 
-                                <asp:Button ID="Button1" class="btn btn-primary btn-user btn-block" runat="server" Text="Register Parent" OnClick="Register" ibka2003
-                                    />
+                                <asp:Button ID="Button1" class="btn btn-primary btn-user btn-block" runat="server" Text="Register Parent" OnClick="Register"/>
 
                             <div class="text-center">
                                 <a class="small" href="ForgotPassword.aspx">Forgot Password?</a>

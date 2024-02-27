@@ -182,11 +182,49 @@
     <Content Include="assets\vendor\php-email-form\validate.js" />
     <Content Include="assets\vendor\swiper\swiper-bundle.min.css" />
     <Content Include="assets\vendor\swiper\swiper-bundle.min.js" />
+    <Content Include="bootstrap-5.3.2-dist\css\bootstrap-grid.css" />
+    <Content Include="bootstrap-5.3.2-dist\css\bootstrap-grid.min.css" />
+    <Content Include="bootstrap-5.3.2-dist\css\bootstrap-grid.rtl.css" />
+    <Content Include="bootstrap-5.3.2-dist\css\bootstrap-grid.rtl.min.css" />
+    <Content Include="bootstrap-5.3.2-dist\css\bootstrap-reboot.css" />
+    <Content Include="bootstrap-5.3.2-dist\css\bootstrap-reboot.min.css" />
+    <Content Include="bootstrap-5.3.2-dist\css\bootstrap-reboot.rtl.css" />
+    <Content Include="bootstrap-5.3.2-dist\css\bootstrap-reboot.rtl.min.css" />
+    <Content Include="bootstrap-5.3.2-dist\css\bootstrap-utilities.css" />
+    <Content Include="bootstrap-5.3.2-dist\css\bootstrap-utilities.min.css" />
+    <Content Include="bootstrap-5.3.2-dist\css\bootstrap-utilities.rtl.css" />
+    <Content Include="bootstrap-5.3.2-dist\css\bootstrap-utilities.rtl.min.css" />
+    <Content Include="bootstrap-5.3.2-dist\css\bootstrap.css" />
+    <Content Include="bootstrap-5.3.2-dist\css\bootstrap.min.css" />
+    <Content Include="bootstrap-5.3.2-dist\css\bootstrap.rtl.css" />
+    <Content Include="bootstrap-5.3.2-dist\css\bootstrap.rtl.min.css" />
+    <Content Include="bootstrap-5.3.2-dist\js\bootstrap.bundle.js" />
+    <Content Include="bootstrap-5.3.2-dist\js\bootstrap.bundle.min.js" />
+    <Content Include="bootstrap-5.3.2-dist\js\bootstrap.esm.js" />
+    <Content Include="bootstrap-5.3.2-dist\js\bootstrap.esm.min.js" />
+    <Content Include="bootstrap-5.3.2-dist\js\bootstrap.js" />
+    <Content Include="bootstrap-5.3.2-dist\js\bootstrap.min.js" />
+    <Content Include="bootstrap-5.3.2-dist\js\popper.min.js" />
     <Content Include="childDashboard.aspx" />
     <Content Include="childGoals.aspx" />
     <Content Include="child_Login.aspx" />
+    <Content Include="css\DashboardStyle.css" />
+    <Content Include="css\ProgressBar.css" />
+    <Content Include="css\sidebarstyle.css" />
+    <Content Include="css\StyleSheet1.css" />
     <Content Include="ForgotPasskey.aspx" />
     <Content Include="ForgotPassword.aspx" />
+    <Content Include="Images\ballonss.jpg" />
+    <Content Include="Images\C-Signup.png" />
+    <Content Include="Images\government.jpg" />
+    <Content Include="Images\Landing Page.png" />
+    <Content Include="Images\Login.jpg" />
+    <Content Include="Images\P-signup.png" />
+    <Content Include="Images\Parents.jpg" />
+    <Content Include="Images\profilepic.png" />
+    <Content Include="Images\Request-btn.png" />
+    <Content Include="Images\tasks.png" />
+    <Content Include="Images\transaction.png" />
     <Content Include="I_css\sb-admin-2.css" />
     <Content Include="I_css\sb-admin-2.min.css" />
     <Content Include="I_css\sidebar.css.txt" />
@@ -1885,6 +1923,7 @@
     <Content Include="parentLogin.aspx" />
     <Content Include="Parent_Goals.aspx" />
     <Content Include="Questions.aspx" />
+    <Content Include="RecoverPassword.aspx" />
     <Content Include="signUp.aspx" />
     <Content Include="signUpParent.aspx" />
     <Content Include="SiteMaster_css\style.css" />
@@ -1909,12 +1948,14 @@
     </Compile>
     <Compile Include="childDashboard.aspx.vb">
       <DependentUpon>childDashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="childGoals.aspx.designer.vb">
       <DependentUpon>childGoals.aspx</DependentUpon>
     </Compile>
     <Compile Include="childGoals.aspx.vb">
       <DependentUpon>childGoals.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="child_Login.aspx.designer.vb">
       <DependentUpon>child_Login.aspx</DependentUpon>
@@ -1928,7 +1969,7 @@
     </Compile>
     <Compile Include="ForgotPasskey.aspx.vb">
       <DependentUpon>ForgotPasskey.aspx</DependentUpon>
-      <SubType>ASPXCodebehind</SubType>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="ForgotPassword.aspx.designer.vb">
       <DependentUpon>ForgotPassword.aspx</DependentUpon>
@@ -1976,12 +2017,14 @@
     </Compile>
     <Compile Include="parentDashboard.aspx.vb">
       <DependentUpon>parentDashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="parentLogin.aspx.designer.vb">
       <DependentUpon>parentLogin.aspx</DependentUpon>
     </Compile>
     <Compile Include="parentLogin.aspx.vb">
       <DependentUpon>parentLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Parent_Goals.aspx.designer.vb">
       <DependentUpon>Parent_Goals.aspx</DependentUpon>
@@ -1994,6 +2037,14 @@
     </Compile>
     <Compile Include="Questions.aspx.vb">
       <DependentUpon>Questions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RecoverPassword.aspx.designer.vb">
+      <DependentUpon>RecoverPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RecoverPassword.aspx.vb">
+      <DependentUpon>RecoverPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="signUp.aspx.designer.vb">
       <DependentUpon>signUp.aspx</DependentUpon>
@@ -2007,6 +2058,7 @@
     </Compile>
     <Compile Include="signUpParent.aspx.vb">
       <DependentUpon>signUpParent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Site1.Master.designer.vb">
       <DependentUpon>Site1.Master</DependentUpon>
@@ -2020,6 +2072,7 @@
     </Compile>
     <Compile Include="Transactions.aspx.vb">
       <DependentUpon>Transactions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Utility\cipherGate.vb" />
     <Compile Include="Utility\DatabaseConnectException.vb" />
@@ -2249,6 +2302,28 @@
     <Content Include="assets\vendor\boxicons\fonts\boxicons.woff" />
     <Content Include="assets\vendor\boxicons\fonts\boxicons.woff2" />
     <Content Include="assets\vendor\swiper\swiper-bundle.min.js.map" />
+    <Content Include="bootstrap-5.3.2-dist\css\bootstrap-grid.css.map" />
+    <Content Include="bootstrap-5.3.2-dist\css\bootstrap-grid.min.css.map" />
+    <Content Include="bootstrap-5.3.2-dist\css\bootstrap-grid.rtl.css.map" />
+    <Content Include="bootstrap-5.3.2-dist\css\bootstrap-grid.rtl.min.css.map" />
+    <Content Include="bootstrap-5.3.2-dist\css\bootstrap-reboot.css.map" />
+    <Content Include="bootstrap-5.3.2-dist\css\bootstrap-reboot.min.css.map" />
+    <Content Include="bootstrap-5.3.2-dist\css\bootstrap-reboot.rtl.css.map" />
+    <Content Include="bootstrap-5.3.2-dist\css\bootstrap-reboot.rtl.min.css.map" />
+    <Content Include="bootstrap-5.3.2-dist\css\bootstrap-utilities.css.map" />
+    <Content Include="bootstrap-5.3.2-dist\css\bootstrap-utilities.min.css.map" />
+    <Content Include="bootstrap-5.3.2-dist\css\bootstrap-utilities.rtl.css.map" />
+    <Content Include="bootstrap-5.3.2-dist\css\bootstrap-utilities.rtl.min.css.map" />
+    <Content Include="bootstrap-5.3.2-dist\css\bootstrap.css.map" />
+    <Content Include="bootstrap-5.3.2-dist\css\bootstrap.min.css.map" />
+    <Content Include="bootstrap-5.3.2-dist\css\bootstrap.rtl.css.map" />
+    <Content Include="bootstrap-5.3.2-dist\css\bootstrap.rtl.min.css.map" />
+    <Content Include="bootstrap-5.3.2-dist\js\bootstrap.bundle.js.map" />
+    <Content Include="bootstrap-5.3.2-dist\js\bootstrap.bundle.min.js.map" />
+    <Content Include="bootstrap-5.3.2-dist\js\bootstrap.esm.js.map" />
+    <Content Include="bootstrap-5.3.2-dist\js\bootstrap.esm.min.js.map" />
+    <Content Include="bootstrap-5.3.2-dist\js\bootstrap.js.map" />
+    <Content Include="bootstrap-5.3.2-dist\js\bootstrap.min.js.map" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
