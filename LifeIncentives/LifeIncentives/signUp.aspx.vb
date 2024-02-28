@@ -13,7 +13,7 @@ Public Class signUp
         End If
     End Sub
 
-    Protected Sub Register(sender As Object, e As EventArgs)
+    Protected Sub Register_Click(sender As Object, e As EventArgs)
 
 
 

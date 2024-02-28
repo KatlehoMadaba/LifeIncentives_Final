@@ -14,13 +14,22 @@ Option Explicit On
 Partial Public Class parentLogin
 
     '''<summary>
-    '''LoginForm control.
+    '''form1 control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents LoginForm As Global.System.Web.UI.HtmlControls.HtmlForm
+    Protected WithEvents form1 As Global.System.Web.UI.HtmlControls.HtmlForm
+
+    '''<summary>
+    '''lblUsername control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lblUsername As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
     '''txtEmail control.
@@ -32,6 +41,15 @@ Partial Public Class parentLogin
     Protected WithEvents txtEmail As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
+    '''lblCode control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lblCode As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
     '''txtPassword control.
     '''</summary>
     '''<remarks>
@@ -41,20 +59,20 @@ Partial Public Class parentLogin
     Protected WithEvents txtPassword As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''LoginButton control.
+    '''btnChildLogin control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents LoginButton As Global.System.Web.UI.WebControls.Button
+    Protected WithEvents btnChildLogin As Global.System.Web.UI.WebControls.Button
 
     '''<summary>
-    '''Message control.
+    '''btnParentLogin control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents Message As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents btnParentLogin As Global.System.Web.UI.WebControls.Button
 End Class

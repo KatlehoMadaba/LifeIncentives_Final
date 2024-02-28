@@ -14,7 +14,7 @@ Public Class child_Login
     Protected Sub Login_Click(sender As Object, e As EventArgs)
 
         Dim Name As String = txtName.Text
-        Dim Password As String = txtPassword.Text
+        Dim Password As String = txtID.Text
 
         If IsValidUser(Name, Password) Then
             Session("password") = Password
