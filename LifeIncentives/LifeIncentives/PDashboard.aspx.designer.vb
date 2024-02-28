@@ -167,6 +167,15 @@ Partial Public Class PDashboard
     Protected WithEvents btnApproveReq As Global.System.Web.UI.WebControls.LinkButton
 
     '''<summary>
+    '''lblYearlyGoal control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lblYearlyGoal As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
     '''childnameLabel control.
     '''</summary>
     '''<remarks>

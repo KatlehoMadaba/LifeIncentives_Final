@@ -23,7 +23,7 @@ Public Class Questions
     Protected Sub RadioButtonList7_SelectedIndexChanged(sender As Object, e As EventArgs) Handles RadioButtonList7.SelectedIndexChanged
         If RadioButtonList7.SelectedValue = "Bursary" Then
             Session("Funding_Type") = "Bursary"
-        ElseIf RadioButtonList2.SelectedValue = "Goverment" Then
+        ElseIf RadioButtonList7.SelectedValue = "Goverment" Then
             Session("Funding_Type") = "Goverment"
         End If
     End Sub
@@ -106,14 +106,14 @@ Public Class Questions
     Protected Sub SubmitClick(sender As Object, e As EventArgs)
 
 
-        fi.Financial_Information_ID = Guid.NewGuid.ToString
+        fi.Financial_Information_ID = Guid.NewGuid.ToString()
         Session("financialId") = fi.Financial_Information_ID ' Session created 
         fi.Parent_ID = Session("Parent_ID")
         fi.Child_ID = Session("childID")
 
-
-        fi.School_Level = RadioButtonList6.SelectedValue
         fi.School_Type = RadioButtonList12.SelectedValue
+        fi.School_Level = RadioButtonList6.SelectedValue
+
 
         fi.School_Fees_Funding_Status = RadioButtonList2.SelectedValue
         If fi.School_Fees_Funding_Status = "Yes" Then

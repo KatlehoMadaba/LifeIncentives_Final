@@ -178,7 +178,7 @@ Public Class TBL_Financial_Information
     End Sub
 
 
-    Shared Function load(Financial_Information_ID As System.Int32) As TBL_Financial_Information
+    Shared Function load(Financial_Information_ID As String) As TBL_Financial_Information
         Dim cmd As New SqlCommand
         cmd.Connection = HttpContext.Current.Session("conn")
         If Not IsNothing(HttpContext.Current.Session("trans")) Then cmd.Transaction = HttpContext.Current.Session("trans")

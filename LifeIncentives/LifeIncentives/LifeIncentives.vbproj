@@ -3621,6 +3621,7 @@
     <Content Include="parentLogin.aspx" />
     <Content Include="Parent_Goals.aspx" />
     <Content Include="PDashboard.aspx" />
+    <Content Include="pLogin.aspx" />
     <Content Include="Questions.aspx" />
     <Content Include="signUp.aspx" />
     <Content Include="signUpParent.aspx" />
@@ -3728,6 +3729,13 @@
     </Compile>
     <Compile Include="PDashboard.aspx.vb">
       <DependentUpon>PDashboard.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="pLogin.aspx.designer.vb">
+      <DependentUpon>pLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pLogin.aspx.vb">
+      <DependentUpon>pLogin.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Questions.aspx.designer.vb">

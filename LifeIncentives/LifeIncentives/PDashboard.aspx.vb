@@ -8,7 +8,6 @@
     Public Shared Password As New List(Of String)()
     Public Shared Employment As New List(Of String)()
     Public Shared Child_ID As New List(Of String)()
-
     Public Shared Financial_Information_ID As New List(Of String)()
     Public Shared Incentives_ID As New List(Of String)()
     Public Shared School_Type As New List(Of String)()
@@ -37,6 +36,9 @@
         If Not IsPostBack Then
             LoadName()
             childIDlb.Text = Session("childID").ToString()
+            TotalGov()
+            TotalParent()
+
         End If
         If Not IsPostBack Then
             Parent_ID.Clear() 'Removing duplicates  there will be additional duplicates 
@@ -46,6 +48,8 @@
             Password.Clear()
             Employment.Clear()
             Child_ID.Clear()
+            Financial_Information_ID.Clear()
+
         End If
     End Sub
     Public Class Parent_User
@@ -67,7 +71,7 @@
 
         Dim pName As String = ""
         If childId IsNot Nothing AndAlso Not String.IsNullOrEmpty(childId.ToString()) Then
-            Dim columnNameAsList As List(Of TBL_Parent_User) = TBL_Parent_User.listall($"where Child_ID= {childId}")
+            Dim columnNameAsList As List(Of TBL_Parent_User) = TBL_Parent_User.listall($"where Child_ID= '{childId}'")
             'childnameLabel.Text = columnNameAsList(0).ToString()
             For Each dp As TBL_Parent_User In columnNameAsList
                 Parent_Name.Add(dp.Parent_Name)
@@ -87,28 +91,50 @@
         Public Property Gadgets_Price As Single
         Public Property Celebration_Price As Single
     End Class
-    Protected Sub TotalGov(sender As Object, e As EventArgs)
+    Protected Sub TotalGov()
         Dim fi_Id As String = Session("financialId")
         Dim fi As New TBL_Financial_Information
         Dim govTotal As Decimal = 0
-        fi = TBL_Financial_Information.load(fi_Id)
+        'fi = TBL_Financial_Information.load(fi_Id)
 
         If fi_Id IsNot Nothing AndAlso Not String.IsNullOrEmpty(fi_Id.ToString()) Then
-            Dim columnNameAsList As List(Of TBL_Financial_Information) = TBL_Financial_Information.listall($"where Financial_Information_ID= {fi_Id}")
+            Dim columnNameAsList As List(Of TBL_Financial_Information) = TBL_Financial_Information.listall($"where Financial_Information_ID= '{fi_Id}'")
             'Dim columnNameAsList2 As List(Of TBL_Incentives) = TBL_Incentives.listall($"where Incentives_ID= {fi_Id}")
+            If Session("Funding_Type") = "Goverment" Then
+                Dim objFinancial As TBL_Financial_Information = TBL_Financial_Information.load(fi_Id)
+                govTotal = objFinancial.School_Fees_Price
+                govAmountlb.Text = govTotal.ToString
+            Else
+                govAmountlb.Text = govTotal.ToString
+            End If
 
-            For Each dp As TBL_Financial_Information In columnNameAsList
-                If Session("Funding_Type") = "Goverment-Funded" Then
-                    School_Fees_Price.Add(dp.School_Fees_Price)
-                End If
-            Next
-            govTotal = School_Fees_Price(0)
-            govAmountlb.Text = govTotal.ToString()
         End If
 
     End Sub
-    Protected Sub TotalParent(sender As Object, e As EventArgs)
 
+    Protected Sub TotalParent()
+        Dim fi_Id As String = Session("financialId")
+        Dim fi As New TBL_Financial_Information
+        Dim schoolFeesPrice As Decimal = 0
+        Dim parentTotal As Decimal = 0
+        If fi_Id IsNot Nothing AndAlso Not String.IsNullOrEmpty(fi_Id.ToString()) Then
+            Dim columnNameAsList As List(Of TBL_Financial_Information) = TBL_Financial_Information.listall($"where Financial_Information_ID= '{fi_Id}'")
+            Dim objFinancial As TBL_Financial_Information = TBL_Financial_Information.load(fi_Id)
+            If Session("Funding_Type") = "Self-Funded" Then
+                schoolFeesPrice = objFinancial.School_Fees_Price
+            End If
+            Dim Accommodation As Decimal = objFinancial.Accommodation_Price
+            Dim Stationery_Price As Decimal = objFinancial.Stationery_Price
+            Dim Allowance_Price As Decimal = objFinancial.Allowance_Price
+            Dim Transport_Price As Decimal = objFinancial.Transport_Price
+            Dim Accommodation_Price As Decimal = objFinancial.Accommodation_Price
+            Dim Membership_Price As Decimal = objFinancial.Membership_Price
+            Dim ExternalClass_Prices As Decimal = objFinancial.ExternalClass_Prices
+            Dim Gadgets_Price As Decimal = objFinancial.Gadgets_Price
+            Dim Celebration_Price As Decimal = objFinancial.Celebration_Price
+            parentTotal = Stationery_Price + Allowance_Price + Transport_Price + Accommodation_Price + Membership_Price + ExternalClass_Prices + Gadgets_Price + Celebration_Price + schoolFeesPrice
+            lbParentAmount.Text = parentTotal.ToString()
+        End If
     End Sub
 
     Protected Sub btnPdashboard_Click(sender As Object, e As EventArgs)

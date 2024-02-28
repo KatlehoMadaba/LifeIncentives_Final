@@ -1,49 +1,49 @@
 ﻿Imports System.Data.SqlClient
 
 Public Class TBL_View_Goals
-    inherits Entity
+    inherits ENTITY
 
-    Public Shared Display_Set_Goals_ID as Boolean = true
-    Public Shared Display_Child_ID as Boolean = true
-    Public Shared Display_Parent_ID as Boolean = true
-    Public Shared Display_Incentives_ID as Boolean = true
-    Public Shared Display_StartDateTime as Boolean = true
-    Public Shared Display_EndDateTime as Boolean = true
-    Public Shared Display_Category as Boolean = true
-    Public Shared Display_Description as Boolean = true
-    Public Shared Display_TimePeriod as Boolean = true
-    Public Shared Display_Amount as Boolean = true
-    Public Shared Display_Status as Boolean = true
+    Public Shared Display_View_Goals_ID As Boolean = True
+    Public Shared Display_Child_ID As Boolean = True
+    Public Shared Display_Parent_ID As Boolean = True
+    Public Shared Display_Incentives_ID As Boolean = True
+    Public Shared Display_StartDateTime As Boolean = True
+    Public Shared Display_EndDateTime As Boolean = True
+    Public Shared Display_Category As Boolean = True
+    Public Shared Display_Description As Boolean = True
+    Public Shared Display_TimePeriod As Boolean = True
+    Public Shared Display_Amount As Boolean = True
+    Public Shared Display_Status As Boolean = True
 
-    Private I_Display_Set_Goals_ID as Boolean = true
-    Private I_Display_Child_ID as Boolean = true
-    Private I_Display_Parent_ID as Boolean = true
-    Private I_Display_Incentives_ID as Boolean = true
-    Private I_Display_StartDateTime as Boolean = true
-    Private I_Display_EndDateTime as Boolean = true
-    Private I_Display_Category as Boolean = true
-    Private I_Display_Description as Boolean = true
-    Private I_Display_TimePeriod as Boolean = true
-    Private I_Display_Amount as Boolean = true
-    Private I_Display_Status as Boolean = true
+    Private I_Display_View_Goals_ID As Boolean = True
+    Private I_Display_Child_ID As Boolean = True
+    Private I_Display_Parent_ID As Boolean = True
+    Private I_Display_Incentives_ID As Boolean = True
+    Private I_Display_StartDateTime As Boolean = True
+    Private I_Display_EndDateTime As Boolean = True
+    Private I_Display_Category As Boolean = True
+    Private I_Display_Description As Boolean = True
+    Private I_Display_TimePeriod As Boolean = True
+    Private I_Display_Amount As Boolean = True
+    Private I_Display_Status As Boolean = True
 
-    Public previous_Set_Goals_ID as nullable(of System.Int32)
+    Public previous_View_Goals_ID As Nullable(Of System.Int32)
 
-    Public Set_Goals_ID As System.String
+    Public View_Goals_ID As System.String
     Public Child_ID As System.String
     Public Parent_ID As System.String
     Public Incentives_ID As System.String
-    Public StartDateTime as nullable(of System.DateTime)
-    Public EndDateTime as nullable(of System.DateTime)
-    Public Category as System.String
-    Public Description as System.String
-    Public TimePeriod as nullable(of System.Int32)
-    Public Amount as nullable(of System.Double)
-    Public Status as System.String
+    Public StartDateTime As Nullable(Of System.DateTime)
+    Public EndDateTime As Nullable(Of System.DateTime)
+    Public Category As System.String
+    Public Description As System.String
+    Public TimePeriod As Nullable(Of System.Int32)
+    Public Amount As Nullable(Of System.Double)
+    Public Status As System.String
     Private newinstance As Boolean = True
 
-    Shared Sub Set_Display_Field_All(display_flag as boolean)
-        Display_Set_Goals_ID = display_flag
+    Shared Sub Set_Display_Field_All(display_flag As Boolean)
+        Display_View_Goals_ID = display_flag
         Display_Child_ID = display_flag
         Display_Parent_ID = display_flag
         Display_Incentives_ID = display_flag
@@ -58,35 +58,35 @@ Public Class TBL_View_Goals
 
 
     Private Sub insert()
-        Dim cmd As New sqlCommand
+        Dim cmd As New SqlCommand
         cmd.Connection = HttpContext.Current.Session("conn")
         If Not IsNothing(HttpContext.Current.Session("trans")) Then cmd.Transaction = HttpContext.Current.Session("trans")
         cmd.CommandType = CommandType.Text
-        cmd.CommandText = "insert into TBL_View_Goals (Set_Goals_ID,Child_ID,Parent_ID,Incentives_ID,StartDateTime,EndDateTime,Category,Description,TimePeriod,Amount,Status)"
-        cmd.CommandText = cmd.CommandText & "values(@Set_Goals_ID,@Child_ID,@Parent_ID,@Incentives_ID,@StartDateTime,@EndDateTime,@Category,@Description,@TimePeriod,@Amount,@Status)"
+        cmd.CommandText = "insert into TBL_View_Goals (View_Goals_ID,Child_ID,Parent_ID,Incentives_ID,StartDateTime,EndDateTime,Category,Description,TimePeriod,Amount,Status)"
+        cmd.CommandText = cmd.CommandText & "values(@View_Goals_ID,@Child_ID,@Parent_ID,@Incentives_ID,@StartDateTime,@EndDateTime,@Category,@Description,@TimePeriod,@Amount,@Status)"
 
-        cmd.Parameters.Add("@Set_Goals_ID", 22, 255, "Set_Goals_ID")
-        cmd.Parameters("@Set_Goals_ID").Value = SetNull(Set_Goals_ID)
+        cmd.Parameters.Add("@View_Goals_ID", 22, 255, "View_Goals_ID")
+        cmd.Parameters("@View_Goals_ID").Value = setNull(View_Goals_ID)
         cmd.Parameters.Add("@Child_ID", 22, 255, "Child_ID")
-        cmd.Parameters("@Child_ID").Value = SetNull(Child_ID)
+        cmd.Parameters("@Child_ID").Value = setNull(Child_ID)
         cmd.Parameters.Add("@Parent_ID", 22, 255, "Parent_ID")
-        cmd.Parameters("@Parent_ID").Value = SetNull(Parent_ID)
+        cmd.Parameters("@Parent_ID").Value = setNull(Parent_ID)
         cmd.Parameters.Add("@Incentives_ID", 22, 255, "Incentives_ID")
-        cmd.Parameters("@Incentives_ID").Value = SetNull(Incentives_ID)
+        cmd.Parameters("@Incentives_ID").Value = setNull(Incentives_ID)
         cmd.Parameters.Add("@StartDateTime", 4, 0, "StartDateTime")
-        cmd.Parameters("@StartDateTime").Value = SetNull(StartDateTime)
+        cmd.Parameters("@StartDateTime").Value = setNull(StartDateTime)
         cmd.Parameters.Add("@EndDateTime", 4, 0, "EndDateTime")
-        cmd.Parameters("@EndDateTime").Value = SetNull(EndDateTime)
+        cmd.Parameters("@EndDateTime").Value = setNull(EndDateTime)
         cmd.Parameters.Add("@Category", 22, 50, "Category")
-        cmd.Parameters("@Category").Value = SetNull(Category)
+        cmd.Parameters("@Category").Value = setNull(Category)
         cmd.Parameters.Add("@Description", 22, 255, "Description")
-        cmd.Parameters("@Description").Value = SetNull(Description)
+        cmd.Parameters("@Description").Value = setNull(Description)
         cmd.Parameters.Add("@TimePeriod", 8, 0, "TimePeriod")
-        cmd.Parameters("@TimePeriod").Value = SetNull(TimePeriod)
+        cmd.Parameters("@TimePeriod").Value = setNull(TimePeriod)
         cmd.Parameters.Add("@Amount", 6, 0, "Amount")
-        cmd.Parameters("@Amount").Value = SetNull(Amount)
+        cmd.Parameters("@Amount").Value = setNull(Amount)
         cmd.Parameters.Add("@Status", 22, 20, "Status")
-        cmd.Parameters("@Status").Value = SetNull(Status)
+        cmd.Parameters("@Status").Value = setNull(Status)
 
 
         cmd.ExecuteNonQuery()
@@ -95,68 +95,68 @@ Public Class TBL_View_Goals
 
 
     Sub delete()
-        Dim cmd As New sqlCommand
+        Dim cmd As New SqlCommand
         cmd.Connection = HttpContext.Current.Session("conn")
         If Not IsNothing(HttpContext.Current.Session("trans")) Then cmd.Transaction = HttpContext.Current.Session("trans")
         cmd.CommandType = CommandType.Text
-        cmd.CommandText = "delete from TBL_View_Goals where Set_Goals_ID=@previous_Set_Goals_ID"
-        cmd.Parameters.Add("@previous_Set_Goals_ID", 22, 255, "previous_Set_Goals_ID")
-        cmd.Parameters("@previous_Set_Goals_ID").Value = Me.previous_Set_Goals_ID
+        cmd.CommandText = "delete from TBL_View_Goals where View_Goals_ID=@previous_View_Goals_ID"
+        cmd.Parameters.Add("@previous_View_Goals_ID", 22, 255, "previous_View_Goals_ID")
+        cmd.Parameters("@previous_View_Goals_ID").Value = Me.previous_View_Goals_ID
 
         cmd.ExecuteNonQuery()
     End Sub
 
 
-    Shared Function load(Set_Goals_ID as System.Int32) As TBL_View_Goals
-        Dim cmd As New sqlCommand
+    Shared Function load(View_Goals_ID As System.Int32) As TBL_View_Goals
+        Dim cmd As New SqlCommand
         cmd.Connection = HttpContext.Current.Session("conn")
         If Not IsNothing(HttpContext.Current.Session("trans")) Then cmd.Transaction = HttpContext.Current.Session("trans")
         cmd.CommandType = CommandType.Text
         cmd.CommandText = "select "
-        cmd.CommandText = cmd.CommandText & "Set_Goals_ID,"
-        if Display_Child_ID = true then cmd.CommandText = cmd.CommandText & "Child_ID,"
-        if Display_Parent_ID = true then cmd.CommandText = cmd.CommandText & "Parent_ID,"
-        if Display_Incentives_ID = true then cmd.CommandText = cmd.CommandText & "Incentives_ID,"
-        if Display_StartDateTime = true then cmd.CommandText = cmd.CommandText & "StartDateTime,"
-        if Display_EndDateTime = true then cmd.CommandText = cmd.CommandText & "EndDateTime,"
-        if Display_Category = true then cmd.CommandText = cmd.CommandText & "Category,"
-        if Display_Description = true then cmd.CommandText = cmd.CommandText & "Description,"
-        if Display_TimePeriod = true then cmd.CommandText = cmd.CommandText & "TimePeriod,"
-        if Display_Amount = true then cmd.CommandText = cmd.CommandText & "Amount,"
-        if Display_Status = true then cmd.CommandText = cmd.CommandText & "Status,"
+        cmd.CommandText = cmd.CommandText & "View_Goals_ID,"
+        If Display_Child_ID = True Then cmd.CommandText = cmd.CommandText & "Child_ID,"
+        If Display_Parent_ID = True Then cmd.CommandText = cmd.CommandText & "Parent_ID,"
+        If Display_Incentives_ID = True Then cmd.CommandText = cmd.CommandText & "Incentives_ID,"
+        If Display_StartDateTime = True Then cmd.CommandText = cmd.CommandText & "StartDateTime,"
+        If Display_EndDateTime = True Then cmd.CommandText = cmd.CommandText & "EndDateTime,"
+        If Display_Category = True Then cmd.CommandText = cmd.CommandText & "Category,"
+        If Display_Description = True Then cmd.CommandText = cmd.CommandText & "Description,"
+        If Display_TimePeriod = True Then cmd.CommandText = cmd.CommandText & "TimePeriod,"
+        If Display_Amount = True Then cmd.CommandText = cmd.CommandText & "Amount,"
+        If Display_Status = True Then cmd.CommandText = cmd.CommandText & "Status,"
         cmd.CommandText = cmd.CommandText.Substring(0, cmd.CommandText.Length - 1)
-        cmd.CommandText = cmd.CommandText & " from TBL_View_Goals where Set_Goals_ID=@Set_Goals_ID"
-        cmd.Parameters.Add("@Set_Goals_ID", 8, 0, "Set_Goals_ID")
-        cmd.Parameters("@Set_Goals_ID").Value = Set_Goals_ID
+        cmd.CommandText = cmd.CommandText & " from TBL_View_Goals where View_Goals_ID=@View_Goals_ID"
+        cmd.Parameters.Add("@View_Goals_ID", 8, 0, "View_Goals_ID")
+        cmd.Parameters("@View_Goals_ID").Value = View_Goals_ID
 
-        Dim pl As New sqlDataAdapter, dt As New DataTable, i As Integer
+        Dim pl As New SqlDataAdapter, dt As New DataTable, i As Integer
         pl.SelectCommand = cmd
         pl.Fill(dt)
         Dim p As New TBL_View_Goals
         For i = 0 To dt.Rows.Count - 1
-            p.Set_Goals_ID = checknull(dt.Rows(i)("Set_Goals_ID"))
-            p.I_Display_Set_Goals_ID = Display_Set_Goals_ID
-            if Display_Child_ID = true then p.Child_ID = checknull(dt.Rows(i)("Child_ID"))
+            p.View_Goals_ID = checkNull(dt.Rows(i)("View_Goals_ID"))
+            p.I_Display_View_Goals_ID = Display_View_Goals_ID
+            If Display_Child_ID = True Then p.Child_ID = checkNull(dt.Rows(i)("Child_ID"))
             p.I_Display_Child_ID = Display_Child_ID
-            if Display_Parent_ID = true then p.Parent_ID = checknull(dt.Rows(i)("Parent_ID"))
+            If Display_Parent_ID = True Then p.Parent_ID = checkNull(dt.Rows(i)("Parent_ID"))
             p.I_Display_Parent_ID = Display_Parent_ID
-            if Display_Incentives_ID = true then p.Incentives_ID = checknull(dt.Rows(i)("Incentives_ID"))
+            If Display_Incentives_ID = True Then p.Incentives_ID = checkNull(dt.Rows(i)("Incentives_ID"))
             p.I_Display_Incentives_ID = Display_Incentives_ID
-            if Display_StartDateTime = true then p.StartDateTime = checknull(dt.Rows(i)("StartDateTime"))
+            If Display_StartDateTime = True Then p.StartDateTime = checkNull(dt.Rows(i)("StartDateTime"))
             p.I_Display_StartDateTime = Display_StartDateTime
-            if Display_EndDateTime = true then p.EndDateTime = checknull(dt.Rows(i)("EndDateTime"))
+            If Display_EndDateTime = True Then p.EndDateTime = checkNull(dt.Rows(i)("EndDateTime"))
             p.I_Display_EndDateTime = Display_EndDateTime
-            if Display_Category = true then p.Category = checknull(dt.Rows(i)("Category"))
+            If Display_Category = True Then p.Category = checkNull(dt.Rows(i)("Category"))
             p.I_Display_Category = Display_Category
-            if Display_Description = true then p.Description = checknull(dt.Rows(i)("Description"))
+            If Display_Description = True Then p.Description = checkNull(dt.Rows(i)("Description"))
             p.I_Display_Description = Display_Description
-            if Display_TimePeriod = true then p.TimePeriod = checknull(dt.Rows(i)("TimePeriod"))
+            If Display_TimePeriod = True Then p.TimePeriod = checkNull(dt.Rows(i)("TimePeriod"))
             p.I_Display_TimePeriod = Display_TimePeriod
-            if Display_Amount = true then p.Amount = checknull(dt.Rows(i)("Amount"))
+            If Display_Amount = True Then p.Amount = checkNull(dt.Rows(i)("Amount"))
             p.I_Display_Amount = Display_Amount
-            if Display_Status = true then p.Status = checknull(dt.Rows(i)("Status"))
+            If Display_Status = True Then p.Status = checkNull(dt.Rows(i)("Status"))
             p.I_Display_Status = Display_Status
-            p.previous_Set_Goals_ID = checknull(dt.Rows(i)("Set_Goals_ID"))
+            p.previous_View_Goals_ID = checkNull(dt.Rows(i)("View_Goals_ID"))
             p.newinstance = False
             Return p
         Next
@@ -170,63 +170,63 @@ Public Class TBL_View_Goals
             Return
         End If
 
-        Dim cmd As New sqlCommand
+        Dim cmd As New SqlCommand
         cmd.Connection = HttpContext.Current.Session("conn")
         If Not IsNothing(HttpContext.Current.Session("trans")) Then cmd.Transaction = HttpContext.Current.Session("trans")
         cmd.CommandType = CommandType.Text
         cmd.CommandText = "update TBL_View_Goals set "
-        cmd.CommandText = cmd.CommandText & " Set_Goals_ID=@Set_Goals_ID,"
-        if I_Display_Child_ID = true then cmd.CommandText = cmd.CommandText & " Child_ID=@Child_ID,"
-        if I_Display_Parent_ID = true then cmd.CommandText = cmd.CommandText & " Parent_ID=@Parent_ID,"
-        if I_Display_Incentives_ID = true then cmd.CommandText = cmd.CommandText & " Incentives_ID=@Incentives_ID,"
-        if I_Display_StartDateTime = true then cmd.CommandText = cmd.CommandText & " StartDateTime=@StartDateTime,"
-        if I_Display_EndDateTime = true then cmd.CommandText = cmd.CommandText & " EndDateTime=@EndDateTime,"
-        if I_Display_Category = true then cmd.CommandText = cmd.CommandText & " Category=@Category,"
-        if I_Display_Description = true then cmd.CommandText = cmd.CommandText & " Description=@Description,"
-        if I_Display_TimePeriod = true then cmd.CommandText = cmd.CommandText & " TimePeriod=@TimePeriod,"
-        if I_Display_Amount = true then cmd.CommandText = cmd.CommandText & " Amount=@Amount,"
-        if I_Display_Status = true then cmd.CommandText = cmd.CommandText & " Status=@Status,"
+        cmd.CommandText = cmd.CommandText & " View_Goals_ID=@View_Goals_ID,"
+        If I_Display_Child_ID = True Then cmd.CommandText = cmd.CommandText & " Child_ID=@Child_ID,"
+        If I_Display_Parent_ID = True Then cmd.CommandText = cmd.CommandText & " Parent_ID=@Parent_ID,"
+        If I_Display_Incentives_ID = True Then cmd.CommandText = cmd.CommandText & " Incentives_ID=@Incentives_ID,"
+        If I_Display_StartDateTime = True Then cmd.CommandText = cmd.CommandText & " StartDateTime=@StartDateTime,"
+        If I_Display_EndDateTime = True Then cmd.CommandText = cmd.CommandText & " EndDateTime=@EndDateTime,"
+        If I_Display_Category = True Then cmd.CommandText = cmd.CommandText & " Category=@Category,"
+        If I_Display_Description = True Then cmd.CommandText = cmd.CommandText & " Description=@Description,"
+        If I_Display_TimePeriod = True Then cmd.CommandText = cmd.CommandText & " TimePeriod=@TimePeriod,"
+        If I_Display_Amount = True Then cmd.CommandText = cmd.CommandText & " Amount=@Amount,"
+        If I_Display_Status = True Then cmd.CommandText = cmd.CommandText & " Status=@Status,"
         cmd.CommandText = cmd.CommandText.Substring(0, cmd.CommandText.Length - 1)
-        cmd.CommandText = cmd.CommandText & " where Set_Goals_ID=@previous_Set_Goals_ID"
+        cmd.CommandText = cmd.CommandText & " where View_Goals_ID=@previous_View_Goals_ID"
 
 
-        cmd.Parameters.Add("@Set_Goals_ID", 22, 255, "Set_Goals_ID")
-        cmd.Parameters("@Set_Goals_ID").Value = SetNull(Set_Goals_ID)
+        cmd.Parameters.Add("@View_Goals_ID", 22, 255, "View_Goals_ID")
+        cmd.Parameters("@View_Goals_ID").Value = setNull(View_Goals_ID)
 
         If I_Display_Child_ID = True Then cmd.Parameters.Add("@Child_ID", 22, 255, "Child_ID")
-        If I_Display_Child_ID = true then cmd.Parameters("@Child_ID").Value = SetNull(Child_ID)
+        If I_Display_Child_ID = True Then cmd.Parameters("@Child_ID").Value = setNull(Child_ID)
 
         If I_Display_Parent_ID = True Then cmd.Parameters.Add("@Parent_ID", 22, 255, "Parent_ID")
-        If I_Display_Parent_ID = true then cmd.Parameters("@Parent_ID").Value = SetNull(Parent_ID)
+        If I_Display_Parent_ID = True Then cmd.Parameters("@Parent_ID").Value = setNull(Parent_ID)
 
         If I_Display_Incentives_ID = True Then cmd.Parameters.Add("@Incentives_ID", 22, 255, "Incentives_ID")
-        If I_Display_Incentives_ID = true then cmd.Parameters("@Incentives_ID").Value = SetNull(Incentives_ID)
+        If I_Display_Incentives_ID = True Then cmd.Parameters("@Incentives_ID").Value = setNull(Incentives_ID)
 
-        if I_Display_StartDateTime = true then cmd.Parameters.Add("@StartDateTime", 4, 0, "StartDateTime")
-        if I_Display_StartDateTime = true then cmd.Parameters("@StartDateTime").Value = SetNull(StartDateTime)
+        If I_Display_StartDateTime = True Then cmd.Parameters.Add("@StartDateTime", 4, 0, "StartDateTime")
+        If I_Display_StartDateTime = True Then cmd.Parameters("@StartDateTime").Value = setNull(StartDateTime)
 
-        if I_Display_EndDateTime = true then cmd.Parameters.Add("@EndDateTime", 4, 0, "EndDateTime")
-        if I_Display_EndDateTime = true then cmd.Parameters("@EndDateTime").Value = SetNull(EndDateTime)
+        If I_Display_EndDateTime = True Then cmd.Parameters.Add("@EndDateTime", 4, 0, "EndDateTime")
+        If I_Display_EndDateTime = True Then cmd.Parameters("@EndDateTime").Value = setNull(EndDateTime)
 
-        if I_Display_Category = true then cmd.Parameters.Add("@Category", 22, 50, "Category")
-        if I_Display_Category = true then cmd.Parameters("@Category").Value = SetNull(Category)
+        If I_Display_Category = True Then cmd.Parameters.Add("@Category", 22, 50, "Category")
+        If I_Display_Category = True Then cmd.Parameters("@Category").Value = setNull(Category)
 
-        if I_Display_Description = true then cmd.Parameters.Add("@Description", 22, 255, "Description")
-        if I_Display_Description = true then cmd.Parameters("@Description").Value = SetNull(Description)
+        If I_Display_Description = True Then cmd.Parameters.Add("@Description", 22, 255, "Description")
+        If I_Display_Description = True Then cmd.Parameters("@Description").Value = setNull(Description)
 
-        if I_Display_TimePeriod = true then cmd.Parameters.Add("@TimePeriod", 8, 0, "TimePeriod")
-        if I_Display_TimePeriod = true then cmd.Parameters("@TimePeriod").Value = SetNull(TimePeriod)
+        If I_Display_TimePeriod = True Then cmd.Parameters.Add("@TimePeriod", 8, 0, "TimePeriod")
+        If I_Display_TimePeriod = True Then cmd.Parameters("@TimePeriod").Value = setNull(TimePeriod)
 
-        if I_Display_Amount = true then cmd.Parameters.Add("@Amount", 6, 0, "Amount")
-        if I_Display_Amount = true then cmd.Parameters("@Amount").Value = SetNull(Amount)
+        If I_Display_Amount = True Then cmd.Parameters.Add("@Amount", 6, 0, "Amount")
+        If I_Display_Amount = True Then cmd.Parameters("@Amount").Value = setNull(Amount)
 
-        if I_Display_Status = true then cmd.Parameters.Add("@Status", 22, 20, "Status")
-        if I_Display_Status = true then cmd.Parameters("@Status").Value = SetNull(Status)
+        If I_Display_Status = True Then cmd.Parameters.Add("@Status", 22, 20, "Status")
+        If I_Display_Status = True Then cmd.Parameters("@Status").Value = setNull(Status)
 
 
 
-        cmd.Parameters.Add("@previous_Set_Goals_ID", 22, 255, "previous_Set_Goals_ID")
-        cmd.Parameters("@previous_Set_Goals_ID").Value = Me.previous_Set_Goals_ID
+        cmd.Parameters.Add("@previous_View_Goals_ID", 22, 255, "previous_View_Goals_ID")
+        cmd.Parameters("@previous_View_Goals_ID").Value = Me.previous_View_Goals_ID
 
 
 
@@ -237,54 +237,54 @@ Public Class TBL_View_Goals
 
     Shared Function listall(Optional ByVal filterstr As String = Nothing, Optional ByVal sortstr As String = Nothing) As System.Collections.Generic.List(Of TBL_View_Goals)
         Dim ps As New Generic.List(Of TBL_View_Goals)
-        Dim cmd As New sqlCommand
+        Dim cmd As New SqlCommand
         cmd.Connection = HttpContext.Current.Session("conn")
         If Not IsNothing(HttpContext.Current.Session("trans")) Then cmd.Transaction = HttpContext.Current.Session("trans")
         cmd.CommandType = CommandType.Text
         cmd.CommandText = "select "
-        cmd.CommandText = cmd.CommandText & "Set_Goals_ID,"
-        if Display_Child_ID = true then cmd.CommandText = cmd.CommandText & "Child_ID,"
-        if Display_Parent_ID = true then cmd.CommandText = cmd.CommandText & "Parent_ID,"
-        if Display_Incentives_ID = true then cmd.CommandText = cmd.CommandText & "Incentives_ID,"
-        if Display_StartDateTime = true then cmd.CommandText = cmd.CommandText & "StartDateTime,"
-        if Display_EndDateTime = true then cmd.CommandText = cmd.CommandText & "EndDateTime,"
-        if Display_Category = true then cmd.CommandText = cmd.CommandText & "Category,"
-        if Display_Description = true then cmd.CommandText = cmd.CommandText & "Description,"
-        if Display_TimePeriod = true then cmd.CommandText = cmd.CommandText & "TimePeriod,"
-        if Display_Amount = true then cmd.CommandText = cmd.CommandText & "Amount,"
-        if Display_Status = true then cmd.CommandText = cmd.CommandText & "Status,"
+        cmd.CommandText = cmd.CommandText & "View_Goals_ID,"
+        If Display_Child_ID = True Then cmd.CommandText = cmd.CommandText & "Child_ID,"
+        If Display_Parent_ID = True Then cmd.CommandText = cmd.CommandText & "Parent_ID,"
+        If Display_Incentives_ID = True Then cmd.CommandText = cmd.CommandText & "Incentives_ID,"
+        If Display_StartDateTime = True Then cmd.CommandText = cmd.CommandText & "StartDateTime,"
+        If Display_EndDateTime = True Then cmd.CommandText = cmd.CommandText & "EndDateTime,"
+        If Display_Category = True Then cmd.CommandText = cmd.CommandText & "Category,"
+        If Display_Description = True Then cmd.CommandText = cmd.CommandText & "Description,"
+        If Display_TimePeriod = True Then cmd.CommandText = cmd.CommandText & "TimePeriod,"
+        If Display_Amount = True Then cmd.CommandText = cmd.CommandText & "Amount,"
+        If Display_Status = True Then cmd.CommandText = cmd.CommandText & "Status,"
         cmd.CommandText = cmd.CommandText.Substring(0, cmd.CommandText.Length - 1)
         cmd.CommandText = cmd.CommandText & " from TBL_View_Goals " & filterstr & " " & sortstr
-        Dim pl As New sqlDataAdapter, dt As New DataTable, i As Integer
+        Dim pl As New SqlDataAdapter, dt As New DataTable, i As Integer
         pl.SelectCommand = cmd
         pl.Fill(dt)
         For i = 0 To dt.Rows.Count - 1
             Dim p As New TBL_View_Goals
-            p.Set_Goals_ID = checknull(dt.Rows(i)("Set_Goals_ID"))
-            p.I_Display_Set_Goals_ID = Display_Set_Goals_ID
-            if Display_Child_ID = true then p.Child_ID = checknull(dt.Rows(i)("Child_ID"))
+            p.View_Goals_ID = checkNull(dt.Rows(i)("View_Goals_ID"))
+            p.I_Display_View_Goals_ID = Display_View_Goals_ID
+            If Display_Child_ID = True Then p.Child_ID = checkNull(dt.Rows(i)("Child_ID"))
             p.I_Display_Child_ID = Display_Child_ID
-            if Display_Parent_ID = true then p.Parent_ID = checknull(dt.Rows(i)("Parent_ID"))
+            If Display_Parent_ID = True Then p.Parent_ID = checkNull(dt.Rows(i)("Parent_ID"))
             p.I_Display_Parent_ID = Display_Parent_ID
-            if Display_Incentives_ID = true then p.Incentives_ID = checknull(dt.Rows(i)("Incentives_ID"))
+            If Display_Incentives_ID = True Then p.Incentives_ID = checkNull(dt.Rows(i)("Incentives_ID"))
             p.I_Display_Incentives_ID = Display_Incentives_ID
-            if Display_StartDateTime = true then p.StartDateTime = checknull(dt.Rows(i)("StartDateTime"))
+            If Display_StartDateTime = True Then p.StartDateTime = checkNull(dt.Rows(i)("StartDateTime"))
             p.I_Display_StartDateTime = Display_StartDateTime
-            if Display_EndDateTime = true then p.EndDateTime = checknull(dt.Rows(i)("EndDateTime"))
+            If Display_EndDateTime = True Then p.EndDateTime = checkNull(dt.Rows(i)("EndDateTime"))
             p.I_Display_EndDateTime = Display_EndDateTime
-            if Display_Category = true then p.Category = checknull(dt.Rows(i)("Category"))
+            If Display_Category = True Then p.Category = checkNull(dt.Rows(i)("Category"))
             p.I_Display_Category = Display_Category
-            if Display_Description = true then p.Description = checknull(dt.Rows(i)("Description"))
+            If Display_Description = True Then p.Description = checkNull(dt.Rows(i)("Description"))
             p.I_Display_Description = Display_Description
-            if Display_TimePeriod = true then p.TimePeriod = checknull(dt.Rows(i)("TimePeriod"))
+            If Display_TimePeriod = True Then p.TimePeriod = checkNull(dt.Rows(i)("TimePeriod"))
             p.I_Display_TimePeriod = Display_TimePeriod
-            if Display_Amount = true then p.Amount = checknull(dt.Rows(i)("Amount"))
+            If Display_Amount = True Then p.Amount = checkNull(dt.Rows(i)("Amount"))
             p.I_Display_Amount = Display_Amount
-            if Display_Status = true then p.Status = checknull(dt.Rows(i)("Status"))
+            If Display_Status = True Then p.Status = checkNull(dt.Rows(i)("Status"))
             p.I_Display_Status = Display_Status
-            p.previous_Set_Goals_ID = checknull(dt.Rows(i)("Set_Goals_ID"))
+            p.previous_View_Goals_ID = checkNull(dt.Rows(i)("View_Goals_ID"))
             p.newinstance = False
-            ps.add(p)
+            ps.Add(p)
         Next
         Return ps
     End Function
@@ -292,18 +292,18 @@ Public Class TBL_View_Goals
 
     Shared Function listallPKOnly(Optional ByVal filterstr As String = Nothing, Optional ByVal sortstr As String = Nothing) As System.Collections.Generic.List(Of TBL_View_Goals)
         Dim ps As New Generic.List(Of TBL_View_Goals)
-        Dim cmd As New sqlCommand
+        Dim cmd As New SqlCommand
         cmd.Connection = HttpContext.Current.Session("conn")
         If Not IsNothing(HttpContext.Current.Session("trans")) Then cmd.Transaction = HttpContext.Current.Session("trans")
         cmd.CommandType = CommandType.Text
-        cmd.CommandText = "select Set_Goals_ID from TBL_View_Goals" & filterstr & " " & sortstr
-        Dim pl As New sqlDataAdapter, dt As New DataTable, i As Integer
+        cmd.CommandText = "select View_Goals_ID from TBL_View_Goals" & filterstr & " " & sortstr
+        Dim pl As New SqlDataAdapter, dt As New DataTable, i As Integer
         pl.SelectCommand = cmd
         pl.Fill(dt)
         For i = 0 To dt.Rows.Count - 1
             Dim p As New TBL_View_Goals
-            p.Set_Goals_ID = checknull(dt.Rows(i)("Set_Goals_ID"))
-            p.previous_Set_Goals_ID = checknull(dt.Rows(i)("Set_Goals_ID"))
+            p.View_Goals_ID = checkNull(dt.Rows(i)("View_Goals_ID"))
+            p.previous_View_Goals_ID = checkNull(dt.Rows(i)("View_Goals_ID"))
             p.newinstance = False
             ps.add(p)
         Next

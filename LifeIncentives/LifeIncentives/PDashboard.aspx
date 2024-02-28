@@ -20,7 +20,7 @@
                                 <div class="progress-bar progress-bar-striped progress-bar-animated" strole="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width:/* 70%*/ ; background-color: deeppink">70%</div>
                             </div>
                         </div>
-                        <p class="r50-uQQ" id="407:1645">R<asp:Label ID="lbParentAmount" runat="server" Text="50"></asp:Label></p>
+                        <p class="r50-uQQ" id="407:1645">R<asp:Label ID="lbParentAmount" runat="server"></asp:Label></p>
                         <div class="group-CuJ" id="407:1646">
 <%--    <asp:LinkButton ID="btnPIncParent" OnClick="btnPIncreseParent_Click" runat="server" data-toggle="modal" data-target="#myModal">
         <img class="vector-4Ap" src="Dimg/plusSign2.png" id="407:1648" /> 
@@ -164,6 +164,7 @@
             </div>
                 </div>
             <p class="your-childs-yearly-goal-y64" id="406:1593">
+                <asp:Label ID="lblYearlyGoal" runat="server" ></asp:Label>
                 Your Childs Yearly Goal
 
             <br />
