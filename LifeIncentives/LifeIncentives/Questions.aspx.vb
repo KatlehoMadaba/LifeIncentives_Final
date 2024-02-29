@@ -168,7 +168,7 @@ Public Class Questions
 
         fi.update()
 
-        Response.Redirect("Login.aspx")
+        Response.Redirect("parentLogin.aspx")
 
     End Sub
 

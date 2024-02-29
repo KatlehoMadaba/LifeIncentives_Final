@@ -25,13 +25,14 @@
 
 
 </head>
-<body style="background-color:#002316">
+<body>
+    <!-- improve the styling of this page -->
     <form id="form1" runat="server">
     <div>
         <div class="container-fluid ">
             <div class="row">
                 <div class="col-md-10 mx-auto">
-                    <div class="card" style="background-image:url('https://icmedonline.com/blog/wp-content/uploads/2017/06/MensHealth.jpeg');border-radius: 25px; border: 2px solid #002316;color:darkblue;">
+                    <div class="card" style="border-radius: 25px; border: 2px solid #002316;color:darkblue;">
                         <div class="card-body" >
                             <div class="row">
 
@@ -186,7 +187,7 @@
         <div class="container-fluid ">
             <div class="row">
                 <div class="col-md-10 mx-auto">
-                    <div class="card" style="background-image:url('https://th.bing.com/th/id/OIP.hQivXUt11_9tekCGBivUuwHaE7?rs=1&pid=ImgDetMain');border-radius: 25px; border: 2px solid #002316;color:darkblue;">
+                    <div class="card" style="border-radius: 25px; border: 2px solid #002316;color:darkblue;">
                         <div class="card-body">
                             <div class="row">
 
