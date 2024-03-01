@@ -22,7 +22,10 @@ Public Class parentLogin
             Response.Redirect("parentDashboard.aspx")
         End If
     End Sub
+    Protected Sub btnChildLogin_Click(ByVal sender As Object, ByVal e As EventArgs)
+        Response.Redirect("child_Login.aspx")
 
+    End Sub
     Private Function IsValidUser(ByVal Email As String, ByVal password As String, ByVal childID As String) As Boolean
         Dim isValid As Boolean = False
         Using connection As New SqlConnection("Data Source=ASUSVIVOBOOK;Initial Catalog=LifeIncentive;Integrated Security=True")

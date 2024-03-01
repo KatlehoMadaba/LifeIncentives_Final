@@ -47,7 +47,7 @@
   <link href="assets/css/style.css" rel="stylesheet"/>
 
 </head>
-<body>
+<body style="background-color:white;">
     <form id="form1" runat="server">
         <div>
 
@@ -84,7 +84,7 @@
                                         </div>
                                        <div class="row">
                                             <div class="col-md-12">
-                                                <asp:Label ID="lblCode" runat="server" Text="Child ID"><span class="lbl-text">Child Id Number</span></asp:Label>
+                                                <asp:Label ID="lblCode" runat="server" Text="Parent  ID"><span class="lbl-text">Parent Id Number</span></asp:Label>
                                                 <div class="form-group">
                                                     <asp:TextBox class="form-control" ID="txtChildID" runat="server"></asp:TextBox>
                                                 </div>
@@ -103,7 +103,7 @@
                                     <div class="btn-space">
                                         <div class="button-container">
                                             <asp:Button ID="btnChildLogin" runat="server" Text="Login" OnClick="Login_Click" CssClass="btn1 btn-curve btntxt-space" Height="50px" Width="220px" />
-                                            <asp:Button ID="btnParentLogin" runat="server" Text="Parent" CssClass=" btn2 btn-curve" Height="50px" Width="145px"/>
+                                            <asp:Button ID="btnParentLogin" runat="server" Text="Child Login" OnClick="btnChildLogin_Click" CssClass=" btn2 btn-curve" Height="50px" Width="145px"/>
                                         </div>
                                     </div>
                                     </center>
