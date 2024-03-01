@@ -68,15 +68,15 @@
                                         <h1 class="text-wel text-space">Welcome</h1>
                                     </center>
                                     <center>
-                                        <h1 class="text-wel text-In">To</h1>
+                                        <h1 class="text-wel text-space">To</h1>
                                     </center>
                                     <center>
-                                        <div class="row">
                                              <h1 class="text-wel text-space">Parent<span class="text-In">Login</span></h1>
-                                        </div>
+                                        </center>
+                                    <center>
                                       <div class="row">
                                             <div class="col-md-12">
-                                                <asp:Label ID="lblUsername" runat="server" Text="Username"><span class="lbl-text">Enter Your Name</span></asp:Label>
+                                                <asp:Label ID="lblEmail" runat="server" Text="Email"><span class="lbl-text">Enter Your Email</span></asp:Label>
                                                 <div class="form-group">
                                                     <asp:TextBox class="form-control" ID="txtEmail" runat="server"></asp:TextBox>
                                                 </div>
@@ -84,7 +84,15 @@
                                         </div>
                                        <div class="row">
                                             <div class="col-md-12">
-                                                <asp:Label ID="lblCode" runat="server" Text="lblCode"><span class="lbl-text">Child Id Number</span></asp:Label>
+                                                <asp:Label ID="lblCode" runat="server" Text="Child ID"><span class="lbl-text">Child Id Number</span></asp:Label>
+                                                <div class="form-group">
+                                                    <asp:TextBox class="form-control" ID="txtChildID" runat="server"></asp:TextBox>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <asp:Label ID="lblPassword" runat="server" Text="Password"><span class="lbl-text">Password</span></asp:Label>
                                                 <div class="form-group">
                                                     <asp:TextBox class="form-control" ID="txtPassword" runat="server"></asp:TextBox>
                                                 </div>
@@ -108,7 +116,7 @@
         </div>
     </div>
 
-        </div>
+        
     </form>
     <script src="bootstrap-5.3.2-dist/js/bootstrap.bundle.js"></script>
     <script src="bootstrap-5.3.2-dist/js/bootstrap.min.js"></script>

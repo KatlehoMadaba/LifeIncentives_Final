@@ -23,13 +23,13 @@ Partial Public Class parentLogin
     Protected WithEvents form1 As Global.System.Web.UI.HtmlControls.HtmlForm
 
     '''<summary>
-    '''lblUsername control.
+    '''lblEmail control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents lblUsername As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents lblEmail As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
     '''txtEmail control.
@@ -48,6 +48,24 @@ Partial Public Class parentLogin
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents lblCode As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''txtChildID control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents txtChildID As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''lblPassword control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lblPassword As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
     '''txtPassword control.

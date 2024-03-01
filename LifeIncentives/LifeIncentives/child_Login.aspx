@@ -1,6 +1,9 @@
 ﻿﻿<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="child_Login.aspx.vb" Inherits="LifeIncentives.child_Login" %>
 <!DOCTYPE html>
 
+
+<!-- make child login look like parent login in terms of credentials-->
+
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
