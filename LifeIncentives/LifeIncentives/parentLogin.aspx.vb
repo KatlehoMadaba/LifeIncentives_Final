@@ -44,8 +44,4 @@ Public Class parentLogin
         Return isValid
     End Function
 
-
-
-
-
 End Class
