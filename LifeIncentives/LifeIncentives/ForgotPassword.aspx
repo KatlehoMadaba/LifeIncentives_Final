@@ -46,7 +46,7 @@
                                             <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control form-control-user" placeholder="Email Address"></asp:TextBox>
                                         </div>                                       
                                         <div>
-                                            <asp:Button ID="LoginButton" runat="server" Text="Send"  CssClass="btn btn-primary btn-user btn-block" style="  margin: 10px"/>
+                                            <asp:Button ID="LoginButton" runat="server" Text="Send" OnClick="btnForgetPassword_Click" CssClass="btn btn-primary btn-user btn-block" style="  background-color:#002316;margin: 10px"/>
                                         </div>
                                         <div>
                                             <asp:Label ID="Message" Visible="false" runat="server" Text="" ForeColor="Red"></asp:Label>
