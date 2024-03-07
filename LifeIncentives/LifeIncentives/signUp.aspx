@@ -2,6 +2,8 @@
 
 <!DOCTYPE html>
 
+
+
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
 
@@ -24,7 +26,7 @@
         <form id="form1" runat="server">
 
     <div class="container" >
-
+  
         <div class="card o-hidden border-0 shadow-lg my-5">
             <div class="card-body p-0">
                 <!-- Nested Row within Card Body -->
@@ -56,15 +58,17 @@
                                     <asp:TextBox class="form-control form-control-user" id="ChildAge"  runat="server" TextMode="Number"
                                         placeholder="Child's Age"></asp:TextBox>
                                     </div>
-                                    <div class="col-sm-6 mb-3 mb-sm-0">
+                                    <%--<div class="col-sm-6 mb-3 mb-sm-0">--%>
                                     <asp:TextBox class="form-control form-control-user" id="ChildPassword"  runat="server"
                                         placeholder="Child's Password" ></asp:TextBox>
                                     </div>
-                                </div>
-
-                                <asp:Button ID="Button1" class="btn btn-primary btn-user btn-block" runat="server" Text="Register Parent" OnClick="Register" ibka2003
-                                    />
-
+                        <asp:Button ID="Registerbtn" runat="server" OnClick="Registerbtn_Click" Text="Register Parent" CssClass="btn btn-primary btn-user btn-block" />
+                        <%--<asp:Button ID="Register" CssClass="btn btn-primary btn-user btn-block" runat="server" Text="Register Parent" OnClick="Register_Click" />
+                                <%--<asp:Button ID=" Button1" CssClass="btn btn-primary btn-user btn-block" runat="server" Text="Register Parent" Onclick="Register" />
+                                <%--<asp:Button ID="Button1" class="btn btn-primary btn-user btn-block" runat="server" Text="Register Parent" OnClick--%>
+                                   --%>
+<%--                        <asp:Button ID="register" runat="server" Text="Register Parent" CssClass="btn btn-primary btn-user btn-block" OnClick="register_Click1" />--%>
+                    
                             <div class="text-center">
                                 <a class="small" href="ForgotPassword.aspx">Forgot Password?</a>
                             </div>
@@ -75,9 +79,7 @@
                     </div>
                 </div>
             </div>
-        </div>
-
-    </div>
+        </div></div>
   
     <!-- Bootstrap core JavaScript-->
     <script src="Login%20and%20Sign%20Up%20assets/vendor/jquery/jquery.min.js"></script>

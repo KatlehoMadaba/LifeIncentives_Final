@@ -46,6 +46,7 @@
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -3623,6 +3624,7 @@
     <Content Include="PDashboard.aspx" />
     <Content Include="pLogin.aspx" />
     <Content Include="Questions.aspx" />
+    <Content Include="setYearly.aspx" />
     <Content Include="signUp.aspx" />
     <Content Include="signUpParent.aspx" />
     <Content Include="SiteMaster_css\style.css" />
@@ -3729,7 +3731,7 @@
     </Compile>
     <Compile Include="PDashboard.aspx.vb">
       <DependentUpon>PDashboard.aspx</DependentUpon>
-      <SubType>ASPXCodebehind</SubType>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="pLogin.aspx.designer.vb">
       <DependentUpon>pLogin.aspx</DependentUpon>
@@ -3744,6 +3746,13 @@
     <Compile Include="Questions.aspx.vb">
       <DependentUpon>Questions.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="setYearly.aspx.designer.vb">
+      <DependentUpon>setYearly.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="setYearly.aspx.vb">
+      <DependentUpon>setYearly.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="signUp.aspx.designer.vb">
       <DependentUpon>signUp.aspx</DependentUpon>

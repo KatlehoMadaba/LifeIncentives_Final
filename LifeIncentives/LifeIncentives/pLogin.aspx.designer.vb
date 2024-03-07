@@ -23,13 +23,13 @@ Partial Public Class pLogin
     Protected WithEvents idttxt As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''nametxt control.
+    '''emailtxt control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents nametxt As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents emailtxt As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
     '''btnSubmit control.

@@ -39,7 +39,7 @@
                                         </div>
                                         <div class="modal-body">
                                             <!-- Input box -->
-                                            <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+                                            <asp:TextBox ID="txtIncParent" runat="server" ></asp:TextBox>
                                         </div>
                                         <div class="modal-footer">
                                             <!-- Submit button -->
@@ -148,20 +148,21 @@
             </div>
 
             <div class="set-daily-goals-WeQ" id="I406:1607;155:1825">
-                  <asp:LinkButton ID="LinkButton2" runat="server" OnClientClick="btnViewGoals" CssClass="set-daily-goals-hMW">Set Goals</asp:LinkButton>
+                  <asp:LinkButton ID="LinkButton2" runat="server" OnClientClick="btnViewGoals" CssClass="set-daily-goals-hMW">Parent Percentage </asp:LinkButton>
                 <img class="game-icons-achievement-WXv" src="Dimg/medalGoals.png" id="I406:1607;155:2003" />
-<%--                <asp:LinkButton ID="LinkButton5" runat="server" OnClientClick="btnViewGoals" CssClass="set-daily-goals-hMW">Set Goals</asp:LinkButton>--%>
-              <%--      <asp:LinkButton runat="server"  OnClick="transactionsBtn" CssClass="set-daily-goals-hMW">View Your Goals</asp:LinkButton>--%>
+
                     <br />
             </div>
             <div class="set-daily-goals-NTe" id="I406:1596;155:1825">
                    <asp:LinkButton ID="btnApproveReq" runat="server" OnClick="btnApproveReq_Click">
                 <img class="auto-group-ezhi-33z" src="Dimg/approvedTick.png" id="HnvZm6pVcfJqPsLPyVezHi" />
                 <div class="auto-group-xl6g-ZY8" id="HnvZrbfLLwutZ7ivuQXL6g">
-                         <p class="set-daily-goals-gse" id="I406:1596;155:2001">View Requests</p>
+                         <p class="set-daily-goals-gse" id="I406:1596;155:2001">Goverment Percentage</p>
                     </asp:LinkButton>
                 </div>
             </div>
+    </div>
+
                 </div>
             <p class="your-childs-yearly-goal-y64" id="406:1593">
                 <asp:Label ID="lblYearlyGoal" runat="server" ></asp:Label>
@@ -179,11 +180,6 @@
             </span>
             <div class="progressCircle-value">90%</div>
         </div>
-                   
-      <%--          <div class="group-24-L6x" id="406:1590">
-                    <img class="vector-Fzc" src="/api/try-prod-ap-southeast-1-first-cluster/project..." id="406:1591" />
-                    <img class="vector-b2t" src="/api/try-prod-ap-southeast-1-first-cluster/project..." id="406:1592" />
-                </div>--%>
             </div>
             <div class="welcome-itC" id="406:1458">
                 <span class="welcome-itC-sub-0">Welcome</span>
@@ -196,7 +192,8 @@
  <%--               <asp:Label ID="childIdLabel" runat="server" Text="Label"></asp:Label>--%>
                 <asp:Label ID="childIDlb" runat="server" ></asp:Label>
             </div>
- 
+    </div>
+
 
 
 

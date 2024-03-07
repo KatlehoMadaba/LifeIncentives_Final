@@ -20,14 +20,10 @@
         pu.Email = Email.Text
         pu.Password = Password.Text
         pu.Employment = "Yes"
-
         pu.Child_ID = Session("childID").ToString() ' Session variable assigned to variable in parent user table 
-
         pu.update()
-
         Response.Redirect("Questions.aspx")
         'Response.Redirect("Pdashboard.aspx")
-
     End Sub
 
 

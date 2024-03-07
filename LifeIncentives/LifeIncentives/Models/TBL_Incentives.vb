@@ -24,10 +24,10 @@ Public Class TBL_Incentives
     Public Incentives_ID As System.String
     Public Child_ID As System.String
     Public Financial_Information_ID As System.String
-    Public Incentive_Type as System.String
-    Public Incentive_Increase as nullable(of System.Int32)
-    Public Incentive_Decrease as nullable(of System.Int32)
-    Public Incentive_Amount as nullable(of System.Double)
+    Public Incentive_Type As System.String
+    Public Incentive_Increase As String
+    Public Incentive_Decrease As String
+    Public Incentive_Amount As Nullable(Of System.Double)
     Private newinstance As Boolean = True
 
     Shared Sub Set_Display_Field_All(display_flag as boolean)
@@ -171,7 +171,7 @@ Public Class TBL_Incentives
 
 
         cmd.Parameters.Add("@previous_Incentives_ID", 22, 255, "previous_Incentives_ID")
-        cmd.Parameters("@previous_Incentives_ID").Value = Me.previous_Incentives_ID
+        'cmd.Parameters("@previous_Incentives_ID").Value = Me.previous_Incentives_ID
 
 
 

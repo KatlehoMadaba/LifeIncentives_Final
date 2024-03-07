@@ -1,0 +1,68 @@
+List all function with out using load all function 
+Example usinğ the Total Goverment example :
+
+first you store the fields in a list  
+    Public Shared Parent_ID As New List(Of String)()
+    Public Shared Parent_Name As New List(Of String)()
+    Public Shared Parent_Surname As New List(Of String)()
+    Public Shared Email As New List(Of String)()
+    Public Shared Password As New List(Of String)()
+    Public Shared Employment As New List(Of String)()
+    Public Shared Child_ID As New List(Of String)()
+    Public Shared Financial_Information_ID As New List(Of String)()
+    Public Shared Incentives_ID As New List(Of String)()
+    Public Shared School_Type As New List(Of String)()
+    Public Shared School_Level As New List(Of String)()
+    Public Shared School_Fees_Funding_Status As New List(Of String)()
+    Public Shared School_Fees_Price As New List(Of Single)()
+    Public Shared Stationery_Funding_Status As New List(Of String)()
+    Public Shared Stationery_Price As New List(Of Single)()
+    Public Shared Allowance_Status As New List(Of String)()
+    Public Shared Allowance_Price As New List(Of Single)()
+    Public Shared Transport_Status As New List(Of String)()
+    Public Shared Transport_Price As New List(Of Single)()
+    Public Shared Accommodation_Status As New List(Of String)()
+    Public Shared Accommodation_Price As New List(Of Single)()
+    Public Shared Membership_Status As New List(Of String)()
+    Public Shared Membership_Price As New List(Of Single)()
+    Public Shared ExternalClasses_Status As New List(Of String)()
+    Public Shared ExternalClass_Prices As New List(Of Single)()
+    Public Shared Gadgets_Status As New List(Of String)()
+    Public Shared Gadgets_Price As New List(Of Single)()
+    Public Shared Celebration_Status As New List(Of String)()
+    Public Shared Celebration_Price As New List(Of Single)()
+
+
+
+  Protected Sub TotalGov()
+        'Dim fi_Id As String = Session("financialId")
+        Dim fi_Id As String = Session("financialId")
+        'Dim fi As New TBL_Financial_Information
+        Dim govTotal As Decimal = 0
+
+        'fi = TBL_Financial_Information.load(fi_Id)
+        If fi_Id IsNot Nothing AndAlso Not String.IsNullOrEmpty(fi_Id.ToString()) Then
+            Dim columnNameAsList As List(Of TBL_Financial_Information) = TBL_Financial_Information.listall($"where Financial_Information_ID= '{fi_Id}'")
+            
+
+            'Dim columnNameAsList2 As List(Of TBL_Incentives) = TBL_Incentives.listall($"where Incentives_ID= {fi_Id}")
+            'If Session("Funding_Type") = "Goverment" Then
+            'Dim objFinancial As TBL_Financial_Information = TBL_Financial_Information.load(fi_Id)
+            'Dim objFinancial As TBL_Financial_Information = TBL_Financial_Information.load(childId)
+            'Dim schoolfeesPrice As Double = objFinancial.School_Fees_Price
+            For Each dp As TBL_Financial_Information In columnNameAsList
+                School_Fees_Price.Add(dp.School_Fees_Price)
+                School_Fees_Funding_Status.Add(dp.School_Fees_Funding_Status)
+            Next
+        End If
+        'childnameLabel.Text = Parent_Name(0).ToString
+        If School_Fees_Funding_Status(0).ToString = "No" Then
+            govTotal = 33026
+        Else
+            govTotal = 0
+        End If
+        'End If'
+        totalGovlb.Text = govTotal.ToString
+        'End If
+
+    End Sub

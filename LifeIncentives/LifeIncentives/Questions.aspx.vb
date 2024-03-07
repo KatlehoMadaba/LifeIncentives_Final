@@ -96,7 +96,7 @@ Public Class Questions
     End Sub
 
     Dim fi As New TBL_Financial_Information
-
+    Dim inc As New TBL_Incentives
     ' fi.Financial_Information_ID = Guid.NewGuid.ToString
 
     'Session("childID") = cu.Child_ID ' Session created 
@@ -104,10 +104,8 @@ Public Class Questions
     'Session("financialId") = fi.Child_ID ' Session created 
 
     Protected Sub SubmitClick(sender As Object, e As EventArgs)
-
-
         fi.Financial_Information_ID = Guid.NewGuid.ToString()
-        Session("financialId") = fi.Financial_Information_ID ' Session created 
+        Session("financialId") = fi.Financial_Information_ID ' Session created' 
         fi.Parent_ID = Session("Parent_ID")
         fi.Child_ID = Session("childID")
 
@@ -124,8 +122,10 @@ Public Class Questions
             Select Case RadioButtonList7.SelectedValue
                 Case "Bursary"
                     fi.School_Fees_Price = 0
+                    Session("Funding_Type") = "Bursary"
                 Case "Goverment"
-                    fi.School_Fees_Price = 33026.4
+                    fi.School_Fees_Price = 33026
+                    Session("Funding_Type") = "Goverment"
             End Select
         End If
 
@@ -193,13 +193,13 @@ Public Class Questions
         End If
 
         fi.update()
-        If True Then
-
-        End If
-        Response.Redirect("PDashboard.aspx")
+        Response.Redirect("setYearly.aspx")
 
     End Sub
 
+    Protected Sub CalculateTotal()
+
+    End Sub
     Protected Sub YearlyGoal(sender As Object, e As EventArgs)
 
     End Sub

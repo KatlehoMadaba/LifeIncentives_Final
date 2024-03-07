@@ -11,68 +11,68 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class signUp
+Partial Public Class setYearly
 
     '''<summary>
-    '''form1 control.
+    '''totalParentlb control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents form1 As Global.System.Web.UI.HtmlControls.HtmlForm
+    Protected WithEvents totalParentlb As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
-    '''ChildID control.
+    '''totalGovlb control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents ChildID As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents totalGovlb As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
-    '''ChildName control.
+    '''percentOptionsGov control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents ChildName As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents percentOptionsGov As Global.System.Web.UI.WebControls.DropDownList
 
     '''<summary>
-    '''ChildSurname control.
+    '''btnparentGoalsub control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents ChildSurname As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents btnparentGoalsub As Global.System.Web.UI.WebControls.Button
 
     '''<summary>
-    '''ChildAge control.
+    '''percentOptionsPar control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents ChildAge As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents percentOptionsPar As Global.System.Web.UI.WebControls.DropDownList
 
     '''<summary>
-    '''ChildPassword control.
+    '''btngovermentGoalsub control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents ChildPassword As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents btngovermentGoalsub As Global.System.Web.UI.WebControls.Button
 
     '''<summary>
-    '''Registerbtn control.
+    '''btnNext control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents Registerbtn As Global.System.Web.UI.WebControls.Button
+    Protected WithEvents btnNext As Global.System.Web.UI.WebControls.Button
 End Class
