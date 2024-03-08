@@ -106,6 +106,7 @@
                                             <asp:Button ID="btnParentLogin" runat="server" Text="Child Login" OnClick="btnChildLogin_Click" CssClass=" btn2 btn-curve" Height="50px" Width="145px"/>
                                         </div>
                                     </div>
+                                <a class="small" href="ForgotPassword.aspx">Forgot Password?</a>
                                     </center>
                                 </div>
                             </div>

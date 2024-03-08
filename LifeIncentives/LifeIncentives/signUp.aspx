@@ -64,7 +64,7 @@
                                 <asp:Button ID="Register" runat="server" CssClass="btn btn-primary btn-user btn-block"  Text="Register Child" OnClick="Register_Click" style="margin: 10px;background-color:#0D986A"/>
                                 <!-- if OnClick is giving errors, comment it out dont remove it -->
                             <div class="text-center">
-                                <a class="small" href="ForgotPassword.aspx">Forgot Password?</a>
+
                             </div>
                             <div class="text-center">
                                 <a class="small" href="parentLogin.aspx">Already have an account? Login!</a>
