@@ -96,7 +96,7 @@ Public Class Questions
     End Sub
 
     Dim fi As New TBL_Financial_Information
-    Dim inc As New TBL_Incentives
+
     ' fi.Financial_Information_ID = Guid.NewGuid.ToString
 
     'Session("childID") = cu.Child_ID ' Session created 
@@ -193,6 +193,7 @@ Public Class Questions
         End If
 
         fi.update()
+
         Response.Redirect("setYearly.aspx")
 
     End Sub

@@ -13,7 +13,7 @@
         <asp:ListItem Text="40%" Value="40"></asp:ListItem>
         <asp:ListItem Text="50%" Value="50"></asp:ListItem>
     </asp:DropDownList>
-     <asp:Button ID="btnparentGoalsub" runat="server" OnClick="btnparentGoalsub_Click" Text="submit G" />
+     <asp:Button ID="btnparentGoalsub" runat="server" OnClick="btnparentGoalsub_Click" Text="submit P" />
 
     <asp:DropDownList ID="percentOptionsPar" runat="server">
         <asp:ListItem Text="10%" Value="10"></asp:ListItem>
@@ -22,6 +22,6 @@
         <asp:ListItem Text="40%" Value="40"></asp:ListItem>
         <asp:ListItem Text="50%" Value="50"></asp:ListItem>
     </asp:DropDownList>
-    <asp:Button ID="btngovermentGoalsub" runat="server" OnClick="btngovermentGoalsub_Click" Text="submit P" />
+    <asp:Button ID="btngovermentGoalsub" runat="server" OnClick="btngovermentGoalsub_Click" Text="submit G" />
     <asp:Button ID="btnNext" runat="server" OnClick="btnNext_Click" Text="Next" />
 </asp:Content>

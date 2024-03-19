@@ -27,7 +27,8 @@ Public Class TBL_Incentives
     Public Incentive_Type As System.String
     Public Incentive_Increase As String
     Public Incentive_Decrease As String
-    Public Incentive_Amount As Nullable(Of System.Double)
+    Public Incentive_Amount As String
+    'Public Incentive_Amount As Nullable(Of System.Double)
     Private newinstance As Boolean = True
 
     Shared Sub Set_Display_Field_All(display_flag as boolean)

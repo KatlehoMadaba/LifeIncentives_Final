@@ -11,7 +11,7 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class PDashboard
+Partial Public Class pppppppFix
 
     '''<summary>
     '''lbParentAmount control.
@@ -59,13 +59,13 @@ Partial Public Class PDashboard
     Protected WithEvents btnDecParent As Global.System.Web.UI.WebControls.LinkButton
 
     '''<summary>
-    '''txtDecParentP control.
+    '''txtDecParent control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents txtDecParentP As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents txtDecParent As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
     '''btnsubPDec control.
@@ -122,13 +122,13 @@ Partial Public Class PDashboard
     Protected WithEvents childIDlb As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
-    '''govAmountlb control.
+    '''govAmount control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents govAmountlb As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents govAmount As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
     '''btnIncGov control.
@@ -140,13 +140,13 @@ Partial Public Class PDashboard
     Protected WithEvents btnIncGov As Global.System.Web.UI.WebControls.LinkButton
 
     '''<summary>
-    '''txtIncGovP control.
+    '''txtGovermnmentAmount control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents txtIncGovP As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents txtGovermnmentAmount As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
     '''btnsubGInc control.
@@ -167,13 +167,13 @@ Partial Public Class PDashboard
     Protected WithEvents btnDecGov As Global.System.Web.UI.WebControls.LinkButton
 
     '''<summary>
-    '''txtDecGovP control.
+    '''txtDecGov control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents txtDecGovP As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents txtDecGov As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
     '''btnsubGDec control.

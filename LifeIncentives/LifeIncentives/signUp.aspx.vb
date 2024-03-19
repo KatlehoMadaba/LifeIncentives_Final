@@ -7,6 +7,7 @@ Public Class signUp
     Dim fi As New TBL_Financial_Information
 
 
+
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         If IsNothing(HttpContext.Current.Session("conn")) Then
             HttpContext.Current.Session("conn") = DBInterface.connect(ConfigurationManager.ConnectionStrings("conn2").ConnectionString)

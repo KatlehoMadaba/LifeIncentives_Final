@@ -1,14 +1,12 @@
 ﻿Public Class setYearly
     Inherits System.Web.UI.Page
 
-    Dim parentTotal As Decimal = 0
-    Dim govTotal As Decimal = 0
+
+
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         If Not IsPostBack Then
             TotalGov()
             TotalParentAmount()
-            gTotalInc()
-            pTotalInc()
         End If
 
     End Sub
@@ -33,7 +31,8 @@
         Public Property Celebration_Price As Single
     End Class
 
-    Protected Sub TotalGov()
+    Protected Function TotalGov() As Decimal
+        Dim govTotal As Decimal = 0
         Dim fi_Id As String = Session("financialId")
         If fi_Id IsNot Nothing AndAlso Not String.IsNullOrEmpty(fi_Id.ToString()) Then
             Dim columnNameAsList As List(Of TBL_Financial_Information) = TBL_Financial_Information.listall($"where Financial_Information_ID= '{fi_Id}'")
@@ -47,8 +46,10 @@
             End If
             totalGovlb.Text = govTotal.ToString
         End If
-    End Sub
-    Protected Sub TotalParentAmount()
+        Return govTotal
+    End Function
+    Protected Function TotalParentAmount() As Decimal
+        Dim parentTotal As Decimal = 0
         Dim fi_Id As String = Session("financialId")
         Dim fi As New TBL_Financial_Information
         Dim schoolFeesPrice As Decimal = 0
@@ -70,7 +71,8 @@
             parentTotal = Stationery_Price + Allowance_Price + Transport_Price + Accommodation_Price + Membership_Price + ExternalClass_Prices + Gadgets_Price + Celebration_Price + schoolFeesPrice
         End If
         totalParentlb.Text = parentTotal.ToString
-    End Sub
+        Return parentTotal
+    End Function
 
     Public Class Incentives
         Public Property Incentives_ID As String
@@ -98,7 +100,7 @@
 
 
 
-    Protected Sub gTotalInc()
+    Protected Sub gTotalInsert()
         Dim incentivescobj As New TBL_Incentives
         incentivescobj.Incentives_ID = Guid.NewGuid.ToString
         Session("govIncentiveID") = incentivescobj.Incentives_ID
@@ -107,10 +109,11 @@
         incentivescobj.Incentive_Type = "ParentTotal"
         incentivescobj.Incentive_Increase = 0
         incentivescobj.Incentive_Decrease = 0
-        incentivescobj.Incentive_Amount = parentTotal
+        incentivescobj.Incentive_Amount = TotalParentAmount()
         incentivescobj.update()
     End Sub
-    Protected Sub pTotalInc()
+    'Inserting the goverment total In incentive table
+    Protected Sub pTotalInsert()
         Dim incentivescobj2 As New TBL_Incentives
         incentivescobj2.Incentives_ID = Guid.NewGuid.ToString
         Session("parIncentiveID") = incentivescobj2.Incentives_ID
@@ -119,10 +122,11 @@
         incentivescobj2.Incentive_Type = "GovermentTotal"
         incentivescobj2.Incentive_Increase = 0
         incentivescobj2.Incentive_Decrease = 0
-        incentivescobj2.Incentive_Amount = govTotal
+        incentivescobj2.Incentive_Amount = TotalGov()
         incentivescobj2.update()
     End Sub
     Protected Sub btngovermentGoalsub_Click()
+        gTotalInsert()
         Dim objsetG As New TBL_Set_Goals
         objsetG.Set_Goals_ID = Guid.NewGuid.ToString
         objsetG.Child_ID = Session("childID")
@@ -137,33 +141,33 @@
         objsetG.Status = "first"
         objsetG.update()
     End Sub
-    Protected Sub btnparentGoalsub_Click()
-        Dim objsetG2 As New TBL_Set_Goals
-        objsetG2.Set_Goals_ID = Guid.NewGuid.ToString
-        objsetG2.Child_ID = Session("childID")
-        objsetG2.Parent_ID = Session("Parent_ID")
-        objsetG2.Incentives_ID = Session("parIncentiveID")
-        'objsetG.StartDateTime
-        'objsetG.EndDateTime
-        objsetG2.Category = "ParentYearGoal"
-        objsetG2.Description = "ParentYearGoal"
-        'objsetG.TimePeriod=
-        objsetG2.Amount = parentYeargoal()
-        objsetG2.Status = "first"
-        objsetG2.update()
-    End Sub
     Protected Function parentYeargoal() As Decimal
         Dim parSelectedValue As Integer = percentOptionsGov.SelectedValue
         Dim parPercentage As Decimal = parSelectedValue / 100
-        Dim parParentYgoal As Decimal = parentTotal * parPercentage
+        Dim parParentYgoal As Decimal = TotalParentAmount() * parPercentage
         Return parParentYgoal
     End Function
     Protected Function govermentYeargoal() As Decimal
         Dim govSelectedValue As Integer = percentOptionsPar.SelectedValue
         Dim govPercentage As Decimal = govSelectedValue / 100
-        Dim govParentYgoal As Decimal = govTotal * govPercentage
+        Dim govParentYgoal As Decimal = TotalGov() * govPercentage
         Return govParentYgoal
     End Function
+    Protected Sub btnparentGoalsub_Click()
+        pTotalInsert()
+        Dim objsetG2 As New TBL_Set_Goals
+        objsetG2.Set_Goals_ID = Guid.NewGuid.ToString
+        objsetG2.Child_ID = Session("childID")
+        objsetG2.Parent_ID = Session("Parent_ID")
+        objsetG2.Incentives_ID = Session("parIncentiveID")
+        objsetG2.StartDateTime = Date.Today
+        objsetG2.StartDateTime = Date.Today.AddYears(1)
+        objsetG2.Category = "ParentYearGoal"
+        objsetG2.Description = "ParentYearGoal"
+        objsetG2.Amount = parentYeargoal()
+        objsetG2.Status = "first"
+        objsetG2.update()
+    End Sub
 
     Protected Sub btnNext_Click(sender As Object, e As EventArgs)
         Response.Redirect("pLogin.aspx")

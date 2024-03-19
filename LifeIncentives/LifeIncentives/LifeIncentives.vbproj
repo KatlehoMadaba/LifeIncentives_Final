@@ -3623,6 +3623,7 @@
     <Content Include="Parent_Goals.aspx" />
     <Content Include="PDashboard.aspx" />
     <Content Include="pLogin.aspx" />
+    <Content Include="pppppppFix.aspx" />
     <Content Include="Questions.aspx" />
     <Content Include="setYearly.aspx" />
     <Content Include="signUp.aspx" />
@@ -3738,6 +3739,13 @@
     </Compile>
     <Compile Include="pLogin.aspx.vb">
       <DependentUpon>pLogin.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="pppppppFix.aspx.designer.vb">
+      <DependentUpon>pppppppFix.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pppppppFix.aspx.vb">
+      <DependentUpon>pppppppFix.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Questions.aspx.designer.vb">

@@ -36,7 +36,6 @@
     Public Shared Incentive_Amount As New List(Of Single)()
 
 
-    Dim incentivescobj As New TBL_Incentives
 
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
@@ -93,7 +92,8 @@
         childnameLabel.Text = Parent_Name(0).ToString
         childIDlb.Text = Child_ID(0).ToString
     End Sub
-    Protected Sub LoadParentTotal()
+    Protected Function LoadParentTotal() As Decimal
+        Dim parentTotal As Decimal = 0
         Dim loginSessionId As String = Session("loginSessionId")
         If loginSessionId IsNot Nothing AndAlso Not String.IsNullOrEmpty(loginSessionId.ToString()) Then
             Dim columnNameList1 As List(Of TBL_Incentives) = TBL_Incentives.listall($"Where Child_ID='{loginSessionId}' AND Incentive_Type='ParentTotal'")
@@ -102,10 +102,12 @@
             Next
         End If
         lbParentAmount.Text = Incentive_Amount(0).ToString
-    End Sub
+        Return parentTotal = Incentive_Amount(0).ToString
+    End Function
 
-    Protected Sub LoadGovermentTotal()
+    Protected Function LoadGovermentTotal() As Decimal
         Dim loginSessionId As String = Session("loginSessionId")
+        Dim govTotal As Decimal = 0
         If loginSessionId IsNot Nothing AndAlso Not String.IsNullOrEmpty(loginSessionId.ToString()) Then
             Dim columnNameList2 As List(Of TBL_Incentives) = TBL_Incentives.listall($"Where Child_ID='{loginSessionId}' AND Incentive_Type='GovermentTotal'")
             For Each pp As TBL_Incentives In columnNameList2
@@ -113,60 +115,93 @@
             Next
         End If
         govAmountlb.Text = Incentive_Amount(1).ToString
-    End Sub
+        Return govTotal = Incentive_Amount(1).ToString
+    End Function
 
-    Protected Sub btnIncParentP_Click(sender As Object, e As EventArgs)
+    'Protected Sub btnIncParentP_Click(sender As Object, e As EventArgs)
+    '    Dim incentivescobj As New TBL_Incentives
+    '    Dim incAmount As Decimal = 0
+    '    incentivescobj.Incentives_ID = Guid.NewGuid.ToString
+    '    incentivescobj.Child_ID = Session("loginSessionId")
+    '    incentivescobj.Financial_Information_ID = Session("financialId")
+    '    incentivescobj.Incentive_Type = "Increase Parent Incentive"
+    '    incentivescobj.Incentive_Increase = Integer.Parse(txtIncParent.Text)
+    '    incentivescobj.Incentive_Decrease = 0
+    '    incAmount = incentivescobj.Incentive_Increase + incentivescobj.Incentive_Decrease
+    '    incentivescobj.Incentive_Amount = incAmount
+    '    incentivescobj.update()
+    '    lbParentAmount.Text = incAmount
+    'End Sub
+
+    'Increase ParentIncentives
+    Protected Sub btnSubPInc_Click(sender As Object, e As EventArgs)
+        Dim incentivescobj As New TBL_Incentives
         Dim incAmount As Decimal = 0
         incentivescobj.Incentives_ID = Guid.NewGuid.ToString
         incentivescobj.Child_ID = Session("loginSessionId")
         incentivescobj.Financial_Information_ID = Session("financialId")
         incentivescobj.Incentive_Type = "Increase Parent Incentive"
-        incentivescobj.Incentive_Increase = Integer.Parse(txtIncParent.Text)
+        incentivescobj.Incentive_Increase = Decimal.Parse(txtIncParent.Text)
         incentivescobj.Incentive_Decrease = 0
-        incAmount = incentivescobj.Incentive_Increase + incentivescobj.Incentive_Decrease
-        incentivescobj.Incentive_Amount = incAmount
-        incentivescobj.update()
-        lbParentAmount.Text = incAmount
-    End Sub
+        Dim Incentive_Increase As Decimal = Decimal.Parse(incentivescobj.Incentive_Increase)
+        Dim Decrease_Increase As Decimal = Decimal.Parse(incentivescobj.Incentive_Decrease)
+        Dim previousAmount As Decimal = Decimal.Parse(incentivescobj.Incentive_Amount)
+        incAmount = Incentive_Increase + Decrease_Increase + previousAmount
 
-    Protected Sub btnSubPdec_Click1(sender As Object, e As EventArgs)
-        Dim decAmount As Decimal = 0
-        incentivescobj.Incentives_ID = Guid.NewGuid.ToString
-        incentivescobj.Child_ID = Session("loginSessionId")
-        incentivescobj.Financial_Information_ID = Session("financialId")
-        incentivescobj.Incentive_Type = "Decrease Parent Incentive"
-        incentivescobj.Incentive_Increase = "NO"
-        incentivescobj.Incentive_Decrease = "YES"
-        Decimal.TryParse(txtDecParentP.Text, decAmount)
-        incentivescobj.Incentive_Amount = decAmount
+        incentivescobj.Incentive_Amount = incAmount
+        'lbParentAmount.Text = incAmount + LoadParentTotal()
+        lbParentAmount.Text = incAmount
         incentivescobj.update()
+    End Sub
+    'Decrease  ParentIncentives
+    Protected Sub btnSubPDec_Click(sender As Object, e As EventArgs)
+        Dim incentivescobj2 As New TBL_Incentives
+        Dim decAmount As Decimal = 0
+        incentivescobj2.Incentives_ID = Guid.NewGuid.ToString
+        incentivescobj2.Child_ID = Session("loginSessionId")
+        incentivescobj2.Financial_Information_ID = Session("financialId")
+        incentivescobj2.Incentive_Type = "Decrease Parent Incentive"
+        incentivescobj2.Incentive_Increase = 0
+        incentivescobj2.Incentive_Decrease = Decimal.Parse(txtDecParentP.Text())
+        Dim Incentive_Increase As Decimal = Decimal.Parse(incentivescobj2.Incentive_Increase)
+        Dim Decrease_Increase As Decimal = Decimal.Parse(incentivescobj2.Incentive_Decrease)
+        Dim previousAmount As Decimal = Decimal.Parse(incentivescobj2.Incentive_Amount)
+        decAmount = Incentive_Increase + Decrease_Increase + previousAmount
+        incentivescobj2.Incentive_Amount = decAmount
+        lbParentAmount.Text = decAmount
+        incentivescobj2.update()
     End Sub
     Protected Sub btnSubGovIncP_Click(sender As Object, e As EventArgs)
-        Dim incAmountG As Decimal = 0
-        incentivescobj.Incentives_ID = Guid.NewGuid.ToString
-        incentivescobj.Child_ID = Session("loginSessionId")
-        incentivescobj.Financial_Information_ID = Session("financialId")
-        incentivescobj.Incentive_Type = "Increase Goverment Incentive"
-        incentivescobj.Incentive_Increase = "YES"
-        incentivescobj.Incentive_Decrease = "NO"
-        Decimal.TryParse(txtIncGovP.Text, incAmountG)
-        incentivescobj.Incentive_Amount = incAmountG
-        incentivescobj.update()
+        Dim incentivescobj3 As New TBL_Incentives
+        'Dim incAmountG As Decimal = 0
+        incentivescobj3.Incentives_ID = Guid.NewGuid.ToString
+        incentivescobj3.Child_ID = Session("loginSessionId")
+        incentivescobj3.Financial_Information_ID = Session("financialId")
+        incentivescobj3.Incentive_Type = "Increase Goverment Incentive"
+        incentivescobj3.Incentive_Increase = Decimal.Parse(txtIncGovP.Text())
+        incentivescobj3.Incentive_Decrease = 0
+        incentivescobj3.Incentive_Amount = 0
+        'incentivescobj3 = Decimal.Parse(incentivescobj3.Incentive_Amount(1))
+
+        incentivescobj3.update()
     End Sub
 
     Protected Sub btnDecGovP_Click(sender As Object, e As EventArgs)
+        Dim incentivescobj4 As New TBL_Incentives
         Dim decAmountG As Decimal = 0
-        incentivescobj.Incentives_ID = Guid.NewGuid.ToString
-        incentivescobj.Child_ID = Session("loginSessionId")
-        incentivescobj.Financial_Information_ID = Session("financialId")
-        incentivescobj.Incentive_Type = "Decrease Goverment Incentive"
-        incentivescobj.Incentive_Increase = "NO"
-        incentivescobj.Incentive_Decrease = "YES"
+        incentivescobj4.Incentives_ID = Guid.NewGuid.ToString
+        incentivescobj4.Child_ID = Session("loginSessionId")
+        incentivescobj4.Financial_Information_ID = Session("financialId")
+        incentivescobj4.Incentive_Type = "Decrease Goverment Incentive"
+        incentivescobj4.Incentive_Increase = "NO"
+        incentivescobj4.Incentive_Decrease = "YES"
         Decimal.TryParse(txtDecGovP.Text, decAmountG)
-        incentivescobj.Incentive_Amount = decAmountG
-        incentivescobj.update()
+        incentivescobj4.Incentive_Amount = decAmountG
+        incentivescobj4.update()
     End Sub
+    Protected Sub btnDecGov_Click(sender As Object, e As EventArgs)
 
+    End Sub
     Protected Sub btnPdashboard_Click(sender As Object, e As EventArgs)
 
     End Sub
@@ -203,13 +238,9 @@
 
     End Sub
 
-    Protected Sub btnSubPInc_Click(sender As Object, e As EventArgs)
 
-    End Sub
 
-    Protected Sub btnSubPDec_Click(sender As Object, e As EventArgs)
 
-    End Sub
 
     Protected Sub btnSubGInc_Click(sender As Object, e As EventArgs)
 
@@ -258,6 +289,26 @@
     End Sub
 
     Protected Sub btnApproveReq_Click(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Protected Sub btnIncGov_Click(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Protected Sub btnViewRequests_Click(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Protected Sub btnSendRequest_Click(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Protected Sub btnDecParent_Click(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Protected Sub btnIncParent_Click(sender As Object, e As EventArgs)
 
     End Sub
 End Class
