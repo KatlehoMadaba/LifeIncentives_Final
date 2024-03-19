@@ -10,8 +10,8 @@ Public Class pLogin
     End Sub
 
     Protected Sub btnSubmit_Click(sender As Object, e As EventArgs)
-        Dim Email As String = emailtxt.Text
-        Dim loginSessionId As String = idttxt.Text
+        Dim Email As String = "j@gmail.com"
+        Dim loginSessionId As String = "123"
         Session("loginSessionId") = loginSessionId
         Response.Redirect("PDashboard.aspx")
     End Sub
