@@ -1,8 +1,6 @@
-﻿<%@ Language="vb" AutoEventWireup="false" CodeBehind="signUp.aspx.vb" Inherits="LifeIncentives.signUp" %>
+﻿﻿<%@ Language="vb" AutoEventWireup="false" CodeBehind="signUp.aspx.vb" Inherits="LifeIncentives.signUp" %>
 
 <!DOCTYPE html>
-
-
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
@@ -22,19 +20,19 @@
 
 </head>
 
-<body style="background:linear-gradient(45deg,#002316,white)">
+<body>
         <form id="form1" runat="server">
 
     <div class="container" >
-  
+
         <div class="card o-hidden border-0 shadow-lg my-5">
             <div class="card-body p-0">
-                <!-- Nested Row within Card Body -->
                 <div class="row">
                     <div class="col-lg-5 d-none d-lg-block bg-register-image"></div>
                     <div class="col-lg-7">
                         <div class="p-5">
                             <div class="text-center">
+                                <!-- Change the font, color and size of the text so that it corresponds to the rest of the text in the project -->
                                 <h1 class="h4 text-gray-900 mb-4">Create Child Account</h1>
                             </div>
                                 <div class="form-group row">
@@ -58,19 +56,15 @@
                                     <asp:TextBox class="form-control form-control-user" id="ChildAge"  runat="server" TextMode="Number"
                                         placeholder="Child's Age"></asp:TextBox>
                                     </div>
-                                    <%--<div class="col-sm-6 mb-3 mb-sm-0">--%>
+                                    <div class="col-sm-6 mb-3 mb-sm-0">
                                     <asp:TextBox class="form-control form-control-user" id="ChildPassword"  runat="server"
                                         placeholder="Child's Password" ></asp:TextBox>
                                     </div>
-                        <asp:Button ID="Registerbtn" runat="server" OnClick="Registerbtn_Click" Text="Register Parent" CssClass="btn btn-primary btn-user btn-block" />
-                        <%--<asp:Button ID="Register" CssClass="btn btn-primary btn-user btn-block" runat="server" Text="Register Parent" OnClick="Register_Click" />
-                                <%--<asp:Button ID=" Button1" CssClass="btn btn-primary btn-user btn-block" runat="server" Text="Register Parent" Onclick="Register" />
-                                <%--<asp:Button ID="Button1" class="btn btn-primary btn-user btn-block" runat="server" Text="Register Parent" OnClick--%>
-                                   --%>
-<%--                        <asp:Button ID="register" runat="server" Text="Register Parent" CssClass="btn btn-primary btn-user btn-block" OnClick="register_Click1" />--%>
-                    
+                                </div>
+                                <asp:Button ID="Register" runat="server" CssClass="btn btn-primary btn-user btn-block"  Text="Register Child" OnClick="Register_Click" style="margin: 10px;background-color:#0D986A"/>
+                                <!-- if OnClick is giving errors, comment it out dont remove it -->
                             <div class="text-center">
-                                <a class="small" href="ForgotPassword.aspx">Forgot Password?</a>
+
                             </div>
                             <div class="text-center">
                                 <a class="small" href="parentLogin.aspx">Already have an account? Login!</a>
@@ -79,7 +73,9 @@
                     </div>
                 </div>
             </div>
-        </div></div>
+        </div>
+
+    </div>
   
     <!-- Bootstrap core JavaScript-->
     <script src="Login%20and%20Sign%20Up%20assets/vendor/jquery/jquery.min.js"></script>
@@ -88,8 +84,8 @@
     <script src="Login%20and%20Sign%20Up%20assets/vendor/jquery-easing/jquery.easing.min.js"></script>
     <!-- Custom scripts for all pages-->
     <script src="Login%20and%20Sign%20Up%20assets/js/sb-admin-2.min.js"></script>
+            <asp:Localize ID="Localize1" runat="server"></asp:Localize>
     </form>
 
 </body> 
 </html>
-
