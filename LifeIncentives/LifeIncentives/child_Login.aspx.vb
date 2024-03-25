@@ -13,11 +13,11 @@ Public Class child_Login
 
     Protected Sub Login_Click(sender As Object, e As EventArgs)
 
-        Dim Name As String = txtName.Text
-        Dim Password As String = txtID.Text
+        Dim name As String = txtName.Text
+        Dim password As String = txtPassword.Text
 
-        If IsValidUser(Name, Password) Then
-            Session("password") = Password
+        If IsValidUser(name, password) Then
+            Session("password") = password
             Response.Redirect("childDashboard.aspx")
         End If
     End Sub
@@ -26,9 +26,12 @@ Public Class child_Login
         Response.Redirect("parentLogin.aspx")
 
     End Sub
+
+
+
     Private Function IsValidUser(ByVal name As String, ByVal password As String) As Boolean
         Dim isValid As Boolean = False
-        Using connection As New SqlConnection("Data Source=ASUSVIVOBOOK;Initial Catalog=LifeIncentive;Integrated Security=True")
+        Using connection As New SqlConnection("Data Source=.;Initial Catalog=LifeIncentive;Integrated Security=True")
             Dim query As String = "SELECT COUNT(*) FROM TBL_Child_User WHERE Child_Name = @Child_Name AND Child_Password = @Child_Password"
             Using command As New SqlCommand(query, connection)
                 command.Parameters.AddWithValue("@Child_Name", name)
