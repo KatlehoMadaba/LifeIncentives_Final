@@ -11,7 +11,7 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class Questions1
+Partial Public Class Questions
 
     '''<summary>
     '''form1 control.

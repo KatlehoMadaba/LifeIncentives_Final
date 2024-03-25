@@ -14,15 +14,12 @@ Public Class signUp
     End Sub
 
     Protected Sub Register_Click(sender As Object, e As EventArgs)
-
-
-
         cu.Child_ID = ChildID.Text
+        Session("childID") = cu.Child_ID
         cu.Child_Name = ChildName.Text
         cu.Child_Surname = ChildSurname.Text
         cu.Child_Age = Integer.Parse(ChildAge.Text)
         cu.Child_Password = ChildPassword.Text
-
         Session("childID") = cu.Child_ID ' Session created 
 
         cu.update()

@@ -11,86 +11,68 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class parentLogin
+Partial Public Class SetYearlyGoals
 
     '''<summary>
-    '''form1 control.
+    '''totalParentlb control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents form1 As Global.System.Web.UI.HtmlControls.HtmlForm
+    Protected WithEvents totalParentlb As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
-    '''lblEmail control.
+    '''totalGovlb control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents lblEmail As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents totalGovlb As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
-    '''txtEmail control.
+    '''percentOptionsGov control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents txtEmail As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents percentOptionsGov As Global.System.Web.UI.WebControls.DropDownList
 
     '''<summary>
-    '''lblCode control.
+    '''btnparentGoalsub control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents lblCode As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents btnparentGoalsub As Global.System.Web.UI.WebControls.Button
 
     '''<summary>
-    '''idttxt control.
+    '''percentOptionsPar control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents idttxt As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents percentOptionsPar As Global.System.Web.UI.WebControls.DropDownList
 
     '''<summary>
-    '''lblPassword control.
+    '''btngovermentGoalsub control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents lblPassword As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents btngovermentGoalsub As Global.System.Web.UI.WebControls.Button
 
     '''<summary>
-    '''txtPassword control.
+    '''btnNext control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents txtPassword As Global.System.Web.UI.WebControls.TextBox
-
-    '''<summary>
-    '''btnChildLogin control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents btnChildLogin As Global.System.Web.UI.WebControls.Button
-
-    '''<summary>
-    '''btnParentLogin control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents btnParentLogin As Global.System.Web.UI.WebControls.Button
+    Protected WithEvents btnNext As Global.System.Web.UI.WebControls.Button
 End Class

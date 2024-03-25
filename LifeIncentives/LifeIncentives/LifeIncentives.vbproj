@@ -3660,6 +3660,7 @@
     <Content Include="parentLogin.aspx" />
     <Content Include="Parent_Goals.aspx" />
     <Content Include="Questions.aspx" />
+    <Content Include="SetYearlyGoals.aspx" />
     <Content Include="signUp.aspx" />
     <Content Include="signUpParent.aspx" />
     <Content Include="SiteMaster_css\style.css" />
@@ -3767,6 +3768,13 @@
     <Compile Include="Questions.aspx.vb">
       <DependentUpon>Questions.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SetYearlyGoals.aspx.designer.vb">
+      <DependentUpon>SetYearlyGoals.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SetYearlyGoals.aspx.vb">
+      <DependentUpon>SetYearlyGoals.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="signUp.aspx.designer.vb">
       <DependentUpon>signUp.aspx</DependentUpon>

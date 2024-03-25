@@ -14,13 +14,14 @@
     Protected Sub ParentRegister(sender As Object, e As EventArgs)
 
         pu.Parent_ID = Guid.NewGuid.ToString
+        Session("Parent_ID") = pu.Parent_ID
         pu.Parent_Name = FirstName.Text
         pu.Parent_Surname = LastName.Text
         pu.Email = Email.Text
         pu.Password = Password.Text
         pu.Employment = "Yes"
 
-        pu.Child_ID = Session("childID").ToString() ' Session variable assigned to variable in parent user table 
+        'pu.Child_ID = Session("childID").ToString() ' Session variable assigned to variable in parent user table 
 
         pu.update()
 

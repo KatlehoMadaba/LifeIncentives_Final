@@ -122,13 +122,13 @@ Partial Public Class childDashboard
     Protected WithEvents lbChildID As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
-    '''govAmount control.
+    '''govAmountlb control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents govAmount As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents govAmountlb As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
     '''btnIncGov control.

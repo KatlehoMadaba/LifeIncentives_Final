@@ -84,9 +84,9 @@
                                         </div>
                                        <div class="row">
                                             <div class="col-md-12">
-                                                <asp:Label ID="lblCode" runat="server" Text="Parent  ID"><span class="lbl-text">Parent Id Number</span></asp:Label>
+                                                <asp:Label ID="lblCode" runat="server" Text="Child  ID"><span class="lbl-text">Child Id Number</span></asp:Label>
                                                 <div class="form-group">
-                                                    <asp:TextBox class="form-control" ID="txtChildID" runat="server"></asp:TextBox>
+                                                    <asp:TextBox class="form-control" ID="idttxt" runat="server"></asp:TextBox>
                                                 </div>
                                             </div>
                                         </div>

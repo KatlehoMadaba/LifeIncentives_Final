@@ -5,15 +5,16 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-       <img class="rectangle-508-5BJ" src="Dimg/" id="407:1681" />
+
+    <img class="rectangle-508-5BJ" src="Dimg/" id="407:1681" />
         <div class="group-20127-nbW" id="407:1682">
-            <div class="group-20125-WnQ" id="407:1683">
+            <div class="group-20125-WnQ" id="407:1683">   
                 <div class="group-20118-FV6" id="407:1684">
                     <p class="parent-incentives-9qN" id="407:1691">Parent Incentives</p>
                     <div class="auto-group-dr1n-3fr" id="AX3e7JhoCx88YWkojDDR1N">
                         <div class="progress-background-nNY" id="407:1692">
                             <div class="progress">
-                                <div class="progress-bar progress-bar-striped progress-bar-animated" strole="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 70%; background-color:deeppink" hi>70%</div>
+                                <div class="progress-bar progress-bar-striped progress-bar-animated" strole="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 70%; background-color:deeppink">70%</div>
                             </div>
                             </div>
                         <p class="r50-6PE" id="407:1693">R<asp:Label ID="lbParentAmount" runat="server" Text="50"></asp:Label></p>
@@ -102,16 +103,6 @@
             <br />
         </p>
         <div class="steps-21J" id="407:1723">
-          <%--  <img class="tdesign-money-wPA" src="Dimg" id="407:1724" />
-            <img class="ellipse-23-fKA" src="Dimg" id="407:1727" />
-            <img class="ellipse-25-zcL" src="Dimg" id="407:1728" />
-            <img class="ellipse-24-LRJ" src="Dimg" id="407:1729" />
-            <div class="item-3785-H5e" id="407:1730">3785</div>
-            <div class="r3785-AfE" id="407:1731">R3785</div>
-            <div class="group-24-fbz" id="407:1732">
-                <img class="vector-muv" src="Dimg" id="407:1733" />
-                <img class="vector-5vc" src="Dimg" id="407:1734" />--%>
-          <%--  </div>--%>
                <div class="container" style="margin-left:7%">
     <div class="row">
         <div class="col-md-3 col-sm-6">
@@ -149,7 +140,7 @@
                                 <div class="progress-bar progress-bar-striped progress-bar-animated" strole="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 70%; background-color: orange">70%</div>
                             </div>
                         </div>
-                        <p class="r50-qVn" id="416:1383">R<asp:Label ID="govAmount" runat="server" Text="50"></asp:Label></p>
+                        <p class="r50-qVn" id="416:1383">R<asp:Label ID="govAmountlb" runat="server" Text="50"></asp:Label></p>
                         <%--<img class="group-LxL" src="Dimg/parentIcon.png" id="416:1384" />--%>
                         <div class="group-Uoe" id="416:1415">
                             <%--             <img class="vector-CzY" src="Dimg/parentIcon.png" id="416:1416" />--%>
@@ -209,4 +200,5 @@
             </div>
             <img class="icon-box-7VE" src="Dimg/govIcon.png" id="416:1409" />
         </div>
+
 </asp:Content>
