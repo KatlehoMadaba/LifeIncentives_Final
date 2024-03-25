@@ -55,8 +55,9 @@
                                         placeholder="Password" ></asp:TextBox>
                                     </div>
                                 </div>
-                                <asp:Button ID="Button1" class="btn btn-primary btn-user btn-block" style="background-color:#0D986A" runat="server" Text="Register parent" OnClick="ParentRegister"/>
-
+<%--                                <asp:Button ID="Button1" class="btn btn-primary btn-user btn-block" style="background-color:#0D986A" runat="server" Text="Register parent" OnClick="ParentRegister"/>--%>
+                            <%--<asp:Button ID="btnRegister" CssClass="btn btn-primary btn-user btn-block" style="background-color:#0D986A" runat="server" Text="Register parent" OnClick="btnRegister_Click" />--%>
+                            <asp:Button ID="Button1" runat="server" Text="Register parent" />
                             <div class="text-center">
                                 <a class="small" href="forgot-password.html">Forgot Password?</a>
                             </div>

@@ -3656,10 +3656,10 @@
     <Content Include="Login and Sign Up assets\vendor\jquery\jquery.min.js" />
     <Content Include="Login and Sign Up assets\vendor\jquery\jquery.slim.js" />
     <Content Include="Login and Sign Up assets\vendor\jquery\jquery.slim.min.js" />
+    <Content Include="newQuestions.aspx" />
     <Content Include="parentDashboard.aspx" />
     <Content Include="parentLogin.aspx" />
     <Content Include="Parent_Goals.aspx" />
-    <Content Include="Questions.aspx" />
     <Content Include="SetYearlyGoals.aspx" />
     <Content Include="signUp.aspx" />
     <Content Include="signUpParent.aspx" />
@@ -3742,6 +3742,13 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="newQuestions.aspx.designer.vb">
+      <DependentUpon>newQuestions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="newQuestions.aspx.vb">
+      <DependentUpon>newQuestions.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="parentDashboard.aspx.designer.vb">
       <DependentUpon>parentDashboard.aspx</DependentUpon>
     </Compile>
@@ -3761,13 +3768,6 @@
     </Compile>
     <Compile Include="Parent_Goals.aspx.vb">
       <DependentUpon>Parent_Goals.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Questions.aspx.designer.vb">
-      <DependentUpon>Questions.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Questions.aspx.vb">
-      <DependentUpon>Questions.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="SetYearlyGoals.aspx.designer.vb">
       <DependentUpon>SetYearlyGoals.aspx</DependentUpon>

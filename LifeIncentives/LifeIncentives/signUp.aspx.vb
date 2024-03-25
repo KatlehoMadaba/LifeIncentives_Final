@@ -13,7 +13,7 @@ Public Class signUp
         End If
     End Sub
 
-    Protected Sub Register_Click(sender As Object, e As EventArgs)
+    Protected Sub Register_Click(sender As Object, e As EventArgs) Handles Register.Click
         cu.Child_ID = ChildID.Text
         Session("childID") = cu.Child_ID
         cu.Child_Name = ChildName.Text
