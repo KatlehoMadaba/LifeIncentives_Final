@@ -3677,6 +3677,7 @@
     <Content Include="Transactions.aspx" />
     <Content Include="Web.config" />
     <Content Include="Profile.aspx" />
+    <Content Include="setYearlyGoal.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="childDashboard.aspx.designer.vb">
@@ -3807,6 +3808,13 @@
     <Compile Include="Profile.aspx.vb">
       <DependentUpon>Profile.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="setYearlyGoal.aspx.designer.vb">
+      <DependentUpon>setYearlyGoal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="setYearlyGoal.aspx.vb">
+      <DependentUpon>setYearlyGoal.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>

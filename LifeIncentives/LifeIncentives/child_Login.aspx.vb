@@ -19,6 +19,9 @@ Public Class child_Login
         If IsValidUser(Name, Password) Then
             Session("password") = Password
             Response.Redirect("childDashboard.aspx")
+        Else
+            Response.Redirect("child_Login.aspx")
+
         End If
     End Sub
 

@@ -11,176 +11,167 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class parentDashboard
+Partial Public Class Webform1
 
     '''<summary>
-    '''lbParentAmount control.
+    '''Label2 control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents lbParentAmount As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents Label2 As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
-    '''btnIncParent control.
+    '''txtCat control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents btnIncParent As Global.System.Web.UI.WebControls.LinkButton
+    Protected WithEvents txtCat As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''txtIncParent control.
+    '''Label6 control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents txtIncParent As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents Label6 As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
-    '''btnsubPInc control.
+    '''txtDes control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents btnsubPInc As Global.System.Web.UI.WebControls.Button
+    Protected WithEvents txtDes As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''btnDecParent control.
+    '''Label7 control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents btnDecParent As Global.System.Web.UI.WebControls.LinkButton
+    Protected WithEvents Label7 As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
-    '''txtDecParentP control.
+    '''txtPrice control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents txtDecParentP As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents txtPrice As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''btnsubPDec control.
+    '''Label3 control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents btnsubPDec As Global.System.Web.UI.WebControls.Button
+    Protected WithEvents Label3 As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
-    '''btnSendRequest control.
+    '''txtDays control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents btnSendRequest As Global.System.Web.UI.WebControls.LinkButton
+    Protected WithEvents txtDays As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''btnViewRequests control.
+    '''Label8 control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents btnViewRequests As Global.System.Web.UI.WebControls.LinkButton
+    Protected WithEvents Label8 As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
-    '''lbpercentageProgress control.
+    '''ddlYear control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents lbpercentageProgress As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents ddlYear As Global.System.Web.UI.WebControls.DropDownList
 
     '''<summary>
-    '''childnameLabel control.
+    '''lblTotalAmount control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents childnameLabel As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents lblTotalAmount As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
-    '''childIDlb control.
+    '''Button1 control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents childIDlb As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents Button1 As Global.System.Web.UI.WebControls.Button
 
     '''<summary>
-    '''govAmountlb control.
+    '''Button2 control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents govAmountlb As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents Button2 As Global.System.Web.UI.WebControls.Button
 
     '''<summary>
-    '''btnIncGov control.
+    '''GridView1 control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents btnIncGov As Global.System.Web.UI.WebControls.LinkButton
+    Protected WithEvents GridView1 As Global.System.Web.UI.WebControls.GridView
 
     '''<summary>
-    '''txtIncGovP control.
+    '''SqlDataSource1 control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents txtIncGovP As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents SqlDataSource1 As Global.System.Web.UI.WebControls.SqlDataSource
 
     '''<summary>
-    '''btnsubGInc control.
+    '''TextBox1 control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents btnsubGInc As Global.System.Web.UI.WebControls.Button
+    Protected WithEvents TextBox1 As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''btnDecGov control.
+    '''GridView2 control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents btnDecGov As Global.System.Web.UI.WebControls.LinkButton
+    Protected WithEvents GridView2 As Global.System.Web.UI.WebControls.GridView
 
     '''<summary>
-    '''txtDecGovP control.
+    '''SqlDataSource2 control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents txtDecGovP As Global.System.Web.UI.WebControls.TextBox
-
-    '''<summary>
-    '''btnsubGDec control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents btnsubGDec As Global.System.Web.UI.WebControls.Button
+    Protected WithEvents SqlDataSource2 As Global.System.Web.UI.WebControls.SqlDataSource
 End Class

@@ -29,7 +29,7 @@ Public Class parentLogin
     Private Function IsValidUser(ByVal Email As String, ByVal password As String, ByVal ParentID As String) As Boolean
         Dim isValid As Boolean = False
         Using connection As New SqlConnection("Data Source=ASUSVIVOBOOK;Initial Catalog=LifeIncentive;Integrated Security=True")
-            Dim query As String = "SELECT COUNT(*) FROM TBL_Parent_User WHERE Email = @Email AND Password = @Password AND Child_ID=@Child_ID"
+            Dim query As String = "SELECT COUNT(*) FROM TBL_Parent_User WHERE Email = @Email AND Password = @Password AND Parent_ID=@Parent_ID"
             Using command As New SqlCommand(query, connection)
                 command.Parameters.AddWithValue("@Email", Email)
                 command.Parameters.AddWithValue("@Password", password)
